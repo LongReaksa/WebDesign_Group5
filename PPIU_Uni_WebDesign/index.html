@@ -15,36 +15,122 @@
   </head>
 
   <body>
-    <header
-      class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom w-100"
-    >
-      <a
-        href="/"
-        class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
-      >
-        <svg class="bi me-2" width="40" height="32">
-          <use xlink:href="#bootstrap"></use>
-        </svg>
-        <span class="fs-4">Simple header</span>
-      </a>
+    <nav class="navbar bg-body-tertiary fixed-top">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">PPIU</a>
+        <div></div>
 
-      <ul class="nav nav-pills">
-        <li class="nav-item">
-          <a href="#" class="nav-link active" aria-current="page">Home</a>
-        </li>
-        <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-      </ul>
-    </header>
-
-    <img
-      id="cover"
-      src="Assets/images/i-made-a-4k-pixelperfect-ascii-wallpaper-from-exploits-v0-g8ud4yocwbeb1.png"
-      alt="cover"
-    />
+        <div
+          class="offcanvas offcanvas-start"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex mt-3" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div id="homePage">
+      <img
+        class="img-fluid"
+        src="Assets/images/i-made-a-4k-pixelperfect-ascii-wallpaper-from-exploits-v0-g8ud4yocwbeb1.png"
+        alt="Cover Image"
+      />
+      <div class="d-flex gap-3 justify-content-center py-3 btm-bar">
+        <span
+          class="badge bg-primary-subtle border border-primary-subtle text-primary-emphasis rounded-pill"
+          >Programs</span
+        >
+        <span
+          class="badge bg-secondary-subtle border border-secondary-subtle text-secondary-emphasis rounded-pill"
+          >Collages</span
+        >
+        <span
+          class="badge bg-success-subtle border border-success-subtle text-success-emphasis rounded-pill"
+          >Actions</span
+        >
+        <span
+          class="badge bg-danger-subtle border border-danger-subtle text-danger-emphasis rounded-pill"
+          >Achievements
+        </span>
+        <span
+          class="badge bg-warning-subtle border border-warning-subtle text-warning-emphasis rounded-pill"
+          >About</span
+        >
+        <span
+          class="badge bg-info-subtle border border-info-subtle text-info-emphasis rounded-pill"
+          >Components</span
+        >
+        <span
+          class="badge bg-light-subtle border border-light-subtle text-light-emphasis rounded-pill"
+          >Shift Times</span
+        >
+        <span
+          class="badge bg-dark-subtle border border-dark-subtle text-dark-emphasis rounded-pill"
+          >Contact
+        </span>
+      </div>
+    </div>
 
     <script src="script.js"></script>
     <script
