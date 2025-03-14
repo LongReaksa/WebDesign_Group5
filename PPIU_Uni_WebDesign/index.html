@@ -4,7 +4,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>PPIU</title>
-
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -12,8 +11,27 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="feature.css" />
+    <style>
+      .event-card {
+        height: 400px; /* Default height doubled (assuming original ~200px) */
+      }
+      .event-card .card-img {
+        height: 100%; /* Ensure image fills the card */
+        object-fit: cover; /* Maintain aspect ratio */
+      }
+      .event-card .card-img-overlay {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Center content vertically */
+        background-color: rgba(
+          0,
+          0,
+          0,
+          0.5
+        ); /* Optional: improve readability */
+      }
+    </style>
   </head>
-
   <body>
     <nav class="navbar bg-body-tertiary fixed-top">
       <div class="container-fluid">
@@ -29,7 +47,6 @@
         </button>
         <a class="navbar-brand" href="#">PPIU</a>
         <div></div>
-
         <div
           class="offcanvas offcanvas-start"
           tabindex="-1"
@@ -96,14 +113,16 @@
         src="Assets/images/i-made-a-4k-pixelperfect-ascii-wallpaper-from-exploits-v0-g8ud4yocwbeb1.png"
         alt="Cover Image"
       />
-      <div class="d-flex gap-3 justify-content-center py-3 btm-bar">
+      <div
+        class="d-flex flex-wrap gap-2 gap-md-3 justify-content-center py-2 py-md-3 btm-bar"
+      >
         <span
           class="badge bg-primary-subtle border border-primary-subtle text-primary-emphasis rounded-pill"
           >Programs</span
         >
         <span
           class="badge bg-secondary-subtle border border-secondary-subtle text-secondary-emphasis rounded-pill"
-          >Collages</span
+          >Academics</span
         >
         <span
           class="badge bg-success-subtle border border-success-subtle text-success-emphasis rounded-pill"
@@ -111,8 +130,8 @@
         >
         <span
           class="badge bg-danger-subtle border border-danger-subtle text-danger-emphasis rounded-pill"
-          >Achievements
-        </span>
+          >Achievements</span
+        >
         <span
           class="badge bg-warning-subtle border border-warning-subtle text-warning-emphasis rounded-pill"
           >About</span
@@ -127,16 +146,642 @@
         >
         <span
           class="badge bg-dark-subtle border border-dark-subtle text-dark-emphasis rounded-pill"
-          >Contact
-        </span>
+          >Contact</span
+        >
+      </div>
+    </div>
+    <div id="bodyPage">
+      <div class="container-marketing">
+        <h1>PROFESSORS</h1>
+        <div class="row">
+          <div class="col-lg-4">
+            <svg
+              class="bd-placeholder-img rounded-circle"
+              width="140"
+              height="140"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-label="Placeholder"
+              preserveAspectRatio="xMidYMid slice"
+              focusable="false"
+            >
+              <title>Placeholder</title>
+              <rect
+                width="100%"
+                height="100%"
+                fill="var(--bs-secondary-color)"
+              ></rect>
+            </svg>
+            <h2 class="fw-normal">Title</h2>
+            <p>
+              Always remember that a computer does not possess intelligence, but
+              it acquires artificial intelligence through three main functional
+              elements: the ability to analyze, the ability to synthesize, and
+              logical reasoning.
+            </p>
+            <p><a class="btn btn-secondary" href="#">View Details</a></p>
+          </div>
+          <div class="col-lg-4">
+            <svg
+              class="bd-placeholder-img rounded-circle"
+              width="140"
+              height="140"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-label="Placeholder"
+              preserveAspectRatio="xMidYMid slice"
+              focusable="false"
+            >
+              <title>Placeholder</title>
+              <rect
+                width="100%"
+                height="100%"
+                fill="var(--bs-secondary-color)"
+              ></rect>
+            </svg>
+            <h2 class="fw-normal">Another Title</h2>
+            <p>
+              If we want to use a smart computer to process the Arabic language,
+              we find ourselves facing a significant challenge, especially since
+              our language is characterized by the cohesion and
+              interconnectedness of its systems. Nevertheless, artificial
+              intelligence enables us to obtain four types of processing:
+              phonetic processing, morphological processing, syntactic
+              processing, and semantic processing.
+            </p>
+            <p><a class="btn btn-secondary" href="#">View Details</a></p>
+          </div>
+          <div class="col-lg-4">
+            <svg
+              class="bd-placeholder-img rounded-circle"
+              width="140"
+              height="140"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-label="Placeholder"
+              preserveAspectRatio="xMidYMid slice"
+              focusable="false"
+            >
+              <title>Placeholder</title>
+              <rect
+                width="100%"
+                height="100%"
+                fill="var(--bs-secondary-color)"
+              ></rect>
+            </svg>
+            <h2 class="fw-normal">Third Title for Confirmation</h2>
+            <p>
+              Thanks to artificial intelligence research and its techniques, we
+              have been able to transition from dealing with the physical to
+              dealing with the logical. This shift has positively reflected on
+              how people interact with their living languages, which means it
+              should also positively impact how we interact with the Arabic
+              language.
+            </p>
+            <p><a class="btn btn-secondary" href="#">View Details</a></p>
+          </div>
+        </div>
+        <hr class="featurette-divider" />
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading fw-normal lh-1">
+              First Featured Title.
+              <span class="text-body-secondary">It’ll blow your mind.</span>
+            </h2>
+            <p class="lead">
+              The human face is an extremely complex and distinctive part of the
+              body. In fact, it is one of the most intricate signaling systems
+              we have available; it involves more than 40 structurally and
+              functionally independent muscles, each of which can be operated
+              independently of the others, forming one of the strongest
+              indicators of emotions.
+            </p>
+          </div>
+          <div class="col-md-5">
+            <svg
+              class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+              width="500"
+              height="500"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-label="Placeholder: 500x500"
+              preserveAspectRatio="xMidYMid slice"
+              focusable="false"
+            >
+              <title>Placeholder</title>
+              <rect
+                width="100%"
+                height="100%"
+                fill="var(--bs-secondary-bg)"
+              ></rect>
+              <text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">
+                500x500
+              </text>
+            </svg>
+          </div>
+        </div>
+        <hr class="featurette-divider" />
+        <div class="row featurette">
+          <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading fw-normal lh-1">
+              Oh yeah, it’s that good.
+              <span class="text-body-secondary">See for yourself.</span>
+            </h2>
+            <p class="lead">
+              When we laugh or cry, we display our emotions, allowing others to
+              catch a glimpse of our minds as they "read" our faces based on
+              changes in key facial components such as the eyes, eyebrows,
+              eyelids, nose, and lips.
+            </p>
+          </div>
+          <div class="col-md-5 order-md-1">
+            <svg
+              class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+              width="500"
+              height="500"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-label="Placeholder: 500x500"
+              preserveAspectRatio="xMidYMid slice"
+              focusable="false"
+            >
+              <title>Placeholder</title>
+              <rect
+                width="100%"
+                height="100%"
+                fill="var(--bs-secondary-bg)"
+              ></rect>
+              <text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">
+                500x500
+              </text>
+            </svg>
+          </div>
+        </div>
+        <hr class="featurette-divider" />
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading fw-normal lh-1">
+              And lastly, this one.
+              <span class="text-body-secondary">Checkmate.</span>
+            </h2>
+            <p class="lead">
+              All the muscles in our bodies are supported by nerves connected
+              from all parts of the body to the spinal cord and brain. This
+              neural connection is bidirectional, meaning the nerve causes
+              muscle contractions based on brain signals while simultaneously
+              sending information about the muscles' state back to the brain.
+            </p>
+          </div>
+          <div class="col-md-5">
+            <svg
+              class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+              width="500"
+              height="500"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-label="Placeholder: 500x500"
+              preserveAspectRatio="xMidYMid slice"
+              focusable="false"
+            >
+              <title>Placeholder</title>
+              <rect
+                width="100%"
+                height="100%"
+                fill="var(--bs-secondary-bg)"
+              ></rect>
+              <text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">
+                500x500
+              </text>
+            </svg>
+          </div>
+        </div>
+        <hr class="featurette-divider" />
+      </div>
+      <h1>LATEST NEWS</h1>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card">
+            <img
+              src="Assets/images/i-made-a-4k-pixelperfect-ascii-wallpaper-from-exploits-v0-g8ud4yocwbeb1.png"
+              class="card-img-top"
+              alt="News1"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img
+              src="Assets/images/i-made-a-4k-pixelperfect-ascii-wallpaper-from-exploits-v0-g8ud4yocwbeb1.png"
+              class="card-img-top"
+              alt="News1"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img
+              src="Assets/images/i-made-a-4k-pixelperfect-ascii-wallpaper-from-exploits-v0-g8ud4yocwbeb1.png"
+              class="card-img-top"
+              alt="News1"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img
+              src="Assets/images/i-made-a-4k-pixelperfect-ascii-wallpaper-from-exploits-v0-g8ud4yocwbeb1.png"
+              class="card-img-top"
+              alt="News1"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img
+              src="Assets/images/i-made-a-4k-pixelperfect-ascii-wallpaper-from-exploits-v0-g8ud4yocwbeb1.png"
+              class="card-img-top"
+              alt="News1"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img
+              src="Assets/images/i-made-a-4k-pixelperfect-ascii-wallpaper-from-exploits-v0-g8ud4yocwbeb1.png"
+              class="card-img-top"
+              alt="News1"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img
+              src="Assets/images/i-made-a-4k-pixelperfect-ascii-wallpaper-from-exploits-v0-g8ud4yocwbeb1.png"
+              class="card-img-top"
+              alt="News1"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img
+              src="Assets/images/i-made-a-4k-pixelperfect-ascii-wallpaper-from-exploits-v0-g8ud4yocwbeb1.png"
+              class="card-img-top"
+              alt="News1"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img
+              src="Assets/images/i-made-a-4k-pixelperfect-ascii-wallpaper-from-exploits-v0-g8ud4yocwbeb1.png"
+              class="card-img-top"
+              alt="News1"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h1>UPCOMING EVENTS</h1>
+      <div class="row row-cols-1 row-cols-md-3 g-4" id="eventCards">
+        <!-- Initial 3 Event Cards -->
+        <div class="col">
+          <div class="card text-bg-dark event-card">
+            <img
+              src="Assets/images/i-made-a-4k-pixelperfect-ascii-wallpaper-from-exploits-v0-g8ud4yocwbeb1.png"
+              class="card-img"
+              alt="Event 1"
+            />
+            <div class="card-img-overlay events-card">
+              <h5 class="card-title">Event 1</h5>
+              <p class="card-text">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content.
+              </p>
+              <p class="card-text"><small>Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card text-bg-dark event-card">
+            <img
+              src="Assets/images/i-made-a-4k-pixelperfect-ascii-wallpaper-from-exploits-v0-g8ud4yocwbeb1.png"
+              class="card-img"
+              alt="Event 2"
+            />
+            <div class="card-img-overlay events-card">
+              <h5 class="card-title">Event 2</h5>
+              <p class="card-text">
+                Join us for an exciting event with insightful discussions.
+              </p>
+              <p class="card-text"><small>Last updated 10 mins ago</small></p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card text-bg-dark event-card">
+            <img
+              src="Assets/images/i-made-a-4k-pixelperfect-ascii-wallpaper-from-exploits-v0-g8ud4yocwbeb1.png"
+              class="card-img"
+              alt="Event 3"
+            />
+            <div class="card-img-overlay events-card">
+              <h5 class="card-title">Event 3</h5>
+              <p class="card-text">
+                A special event featuring guest speakers and sessions.
+              </p>
+              <p class="card-text"><small>Last updated 1 hour ago</small></p>
+            </div>
+          </div>
+        </div>
+        <!-- Hidden 6 Event Cards -->
+        <div class="col hidden-event" style="display: none">
+          <div class="card text-bg-dark event-card">
+            <img
+              src="Assets/images/i-made-a-4k-pixelperfect-ascii-wallpaper-from-exploits-v0-g8ud4yocwbeb1.png"
+              class="card-img"
+              alt="Event 4"
+            />
+            <div class="card-img-overlay events-card">
+              <h5 class="card-title">Event 4</h5>
+              <p class="card-text">
+                An interactive workshop on technology advancements.
+              </p>
+              <p class="card-text"><small>Last updated 2 hours ago</small></p>
+            </div>
+          </div>
+        </div>
+        <div class="col hidden-event" style="display: none">
+          <div class="card text-bg-dark event-card">
+            <img
+              src="Assets/images/i-made-a-4k-pixelperfect-ascii-wallpaper-from-exploits-v0-g8ud4yocwbeb1.png"
+              class="card-img"
+              alt="Event 5"
+            />
+            <div class="card-img-overlay events-card">
+              <h5 class="card-title">Event 5</h5>
+              <p class="card-text">
+                A networking event for professionals in the industry.
+              </p>
+              <p class="card-text"><small>Last updated 1 day ago</small></p>
+            </div>
+          </div>
+        </div>
+        <div class="col hidden-event" style="display: none">
+          <div class="card text-bg-dark event-card">
+            <img
+              src="Assets/images/i-made-a-4k-pixelperfect-ascii-wallpaper-from-exploits-v0-g8ud4yocwbeb1.png"
+              class="card-img"
+              alt="Event 6"
+            />
+            <div class="card-img-overlay events-card">
+              <h5 class="card-title">Event 6</h5>
+              <p class="card-text">
+                A seminar on future trends in artificial intelligence.
+              </p>
+              <p class="card-text"><small>Last updated 2 days ago</small></p>
+            </div>
+          </div>
+        </div>
+        <div class="col hidden-event" style="display: none">
+          <div class="card text-bg-dark event-card">
+            <img
+              src="Assets/images/i-made-a-4k-pixelperfect-ascii-wallpaper-from-exploits-v0-g8ud4yocwbeb1.png"
+              class="card-img"
+              alt="Event 7"
+            />
+            <div class="card-img-overlay events-card">
+              <h5 class="card-title">Event 7</h5>
+              <p class="card-text">A hands-on coding bootcamp for beginners.</p>
+              <p class="card-text"><small>Last updated 3 days ago</small></p>
+            </div>
+          </div>
+        </div>
+        <div class="col hidden-event" style="display: none">
+          <div class="card text-bg-dark event-card">
+            <img
+              src="Assets/images/i-made-a-4k-pixelperfect-ascii-wallpaper-from-exploits-v0-g8ud4yocwbeb1.png"
+              class="card-img"
+              alt="Event 8"
+            />
+            <div class="card-img-overlay events-card">
+              <h5 class="card-title">Event 8</h5>
+              <p class="card-text">A panel discussion with industry leaders.</p>
+              <p class="card-text"><small>Last updated 4 days ago</small></p>
+            </div>
+          </div>
+        </div>
+        <div class="col hidden-event" style="display: none">
+          <div class="card text-bg-dark event-card">
+            <img
+              src="Assets/images/i-made-a-4k-pixelperfect-ascii-wallpaper-from-exploits-v0-g8ud4yocwbeb1.png"
+              class="card-img"
+              alt="Event 9"
+            />
+            <div class="card-img-overlay events-card">
+              <h5 class="card-title">Event 9</h5>
+              <p class="card-text">A community meetup for tech enthusiasts.</p>
+              <p class="card-text"><small>Last updated 5 days ago</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <button id="seeMoreBtn" class="btn btn-primary">See More</button>
+        <button id="seeLessBtn" class="btn btn-primary" style="display: none">
+          See Less
+        </button>
       </div>
     </div>
 
+    <footer class="py-5" style="color: white">
+      <div class="container">
+        <div class="row">
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-white">Home</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-white">Features</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-white">Pricing</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-white">FAQs</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-white">About</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-white">Home</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-white">Features</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-white">Pricing</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-white">FAQs</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-white">About</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-white">Home</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-white">Features</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-white">Pricing</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-white">FAQs</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-white">About</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-5 offset-md-1 mb-3">
+            <form>
+              <h5>Subscribe to our newsletter</h5>
+              <p>Monthly digest of what's new and exciting from us.</p>
+              <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                <label for="newsletter1" class="visually-hidden"
+                  >Email address</label
+                >
+                <input
+                  id="newsletter1"
+                  type="text"
+                  class="form-control"
+                  placeholder="Email address"
+                />
+                <button class="btn btn-primary" type="button">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div
+          class="d-flex flex-column flex-sm-row justify-content-center py-4 my-4 border-top"
+        >
+          <p>© 2024 Company, Inc. All rights reserved.</p>
+          <ul class="list-unstyled d-flex">
+            <li class="ms-3">
+              <a class="link-body-emphasis" href="#">
+                <svg class="bi" width="24" height="24">
+                  <use xlink:href="#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="ms-3">
+              <a class="link-body-emphasis" href="#">
+                <svg class="bi" width="24" height="24">
+                  <use xlink:href="#instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="ms-3">
+              <a class="link-body-emphasis" href="#">
+                <svg class="bi" width="24" height="24">
+                  <use xlink:href="#facebook"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
     <script src="script.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script></script>
   </body>
 </html>

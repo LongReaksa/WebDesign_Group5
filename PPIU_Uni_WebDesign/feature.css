@@ -1,5 +1,5 @@
 body {
-    background-color: rgba(97, 85, 85, 0.488);  
+    background-color: rgb(161, 161, 161);  
     padding: 0;
     margin: 0;
     width: 100%;  
@@ -9,6 +9,7 @@ body {
 
 .bg-body-tertiary {
     background-color: brown !important;
+    font-weight: bolder;
 }
 
 .offcanvas-start {
@@ -42,6 +43,11 @@ body {
     object-fit: cover;
 }
 
+#bodyPage .container-marketing {
+    margin: 0;
+    width: 100%;
+}
+
 .btm-bar {
     background-color: brown !important;
 }
@@ -54,3 +60,51 @@ body {
     margin: auto 0.5%;
 }
 
+#bodyPage {
+    width: 80%;
+    margin: 30px auto;
+}
+
+#bodyPage h1 {
+    text-align: center;
+    margin: 20px;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-weight: bolder;
+}
+
+footer {
+    width: 100%;
+    background-color: #000000; /* or any color */
+    padding: 0;
+    color: white;
+}
+
+footer .nav-link {
+    color: white;
+  }
+  
+footer .nav-link:hover {
+    color:#000000;
+}
+
+.container {
+    max-width: 80% !important;
+}
+
+.event-card {
+    height: 400px;
+  }
+  .event-card .card-img {
+    height: 100%;
+    object-fit: cover;
+  }
+  .event-card .card-img-overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional */
+  }
+
+  /* currenly update text in event card to bottom */
