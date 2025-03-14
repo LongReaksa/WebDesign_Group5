@@ -1,110 +1,381 @@
 body {
-    background-color: rgb(161, 161, 161);  
+    background-color: #f5f5f5;
     padding: 0;
     margin: 0;
-    width: 100%;  
-    height: 100vh;
-}   
-
-
-.bg-body-tertiary {
-    background-color: brown !important;
-    font-weight: bolder;
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.offcanvas-start {
-    background-color: brown;
+body.khmer {
+    font-family: 'Noto Sans Khmer', sans-serif;
+}
+
+#languageToggle {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #ffffff !important;
+    color: #ce3813 !important;
+    border-color: #ce3813 !important;
+}
+
+#languageToggle:hover {
+    background-color: #f0f0f0 !important;
+    color: #ce3813 !important;
+}
+
+.bg-body-tertiary {
+    background-color: #ce3813 !important;
+    font-weight: bold;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+    background-color: rgba(139, 69, 19, 0.9) !important;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    color: #fff !important;
 }
 
 .navbar-toggler {
-    border: 2px solid rgba(0, 0, 0, 0.505);
-    background:none;
-    margin-left: 20px;
+    border: 1px solid #fff;
+    background: none;
     box-shadow: none !important;
 }
 
+#offcanvasNavbarLabel {
+    color: #fff;
+}
+
 .navbar-toggler:hover {
-    border-color: rgb(0, 0, 0);
+    border-color: #000;
+}
+
+.navbar-toggler-icon {
+    filter: brightness(0) invert(1); /* Makes the icon white */
+}
+
+.navbar-toggler:hover .navbar-toggler-icon {
+    filter: brightness(0) invert(1) opacity(0.8); /* Slightly dim on hover for feedback */
+}
+
+.offcanvas-start {
+    background-color: #ce3813;
+}
+
+.offcanvas-body .nav-link {
+    color: #fff !important;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.offcanvas-body .nav-link:hover {
+    color: #ddd !important;
 }
 
 .form-control {
-    background-color: gray;
-    border-color: gray;
+    background-color: #d3d3d3;
+    border-color: #d3d3d3;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #ce3813;
+    box-shadow: 0 0 5px rgba(139, 69, 19, 0.3);
 }
 
 #homePage {
     width: 100%;
     height: auto;
+    position: relative;
 }
 
 #homePage img {
     width: 100%;
     height: 70vh;
     object-fit: cover;
+    filter: brightness(70%);
 }
 
-#bodyPage .container-marketing {
-    margin: 0;
-    width: 100%;
+#homePage::before {
+    content: attr(data-lang-text);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .btm-bar {
-    background-color: brown !important;
+    background-color: #ce3813 !important;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-.btm-bar span {
-    width: 120px;
-    height: 40px;
-    align-content: center;
-    font-size: 0.9em;
-    margin: auto 0.5%;
+.btm-bar .dropdown {
+    width: 140px;
+    height: 45px;
+    font-size: 1rem;
+    margin: 0;
+    background-color: transparent;
+    border: none;
+    color: inherit;
+}
+
+.btm-bar .btn {
+    width: 100%;
+    transition: transform 0.2s ease;
+}
+
+.btm-bar .btn:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .btm-bar {
+        gap: 5px;
+    }
+
+    .btm-bar .dropdown {
+        width: 120px;
+        height: 40px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .btm-bar {
+        gap: 3px;
+    }
+
+    .btm-bar .dropdown {
+        width: 100px;
+        height: 35px;
+        font-size: 0.8rem;
+    }
 }
 
 #bodyPage {
     width: 80%;
-    margin: 30px auto;
+    margin: 40px auto;
 }
 
 #bodyPage h1 {
     text-align: center;
-    margin: 20px;
+    margin: 40px 0;
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+h2 {
+    margin-top: 20px;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.event-card, .card {
+    height: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: appear 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0%;
+}
+
+.event-card:hover, .card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.event-card .card-img, .card .card-img-top {
+    height: 100% !important;
+    object-fit: cover;
+}
+
+.card-img-overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end !important;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+}
+
+.card-img-overlay .card-title {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.card-img-overlay .card-text {
+    color: #ddd;
+}
+
+.featurette {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 0;
+}
+
+.featurette .col-md-5 img {
     width: 100%;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    font-weight: bolder;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+}
+
+.featurette .lead {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+#location {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px 0;
+}
+
+#location h1 {
+    margin: 50px auto;
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+iframe {
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 footer {
     width: 100%;
-    background-color: #000000; /* or any color */
-    padding: 0;
+    background-color: #333;
+    padding: 40px 0;
     color: white;
 }
 
 footer .nav-link {
     color: white;
-  }
-  
+    transition: color 0.3s ease;
+}
+
 footer .nav-link:hover {
-    color:#000000;
+    color: #ce3813;
+}
+
+footer .btn-primary {
+    background-color: #ce3813;
+    border-color: #ce3813;
+    transition: background-color 0.3s ease;
+}
+
+footer .btn-primary:hover {
+    background-color: #6b3510;
 }
 
 .container {
     max-width: 80% !important;
 }
 
-.event-card {
-    height: 400px;
-  }
-  .event-card .card-img {
-    height: 100%;
-    object-fit: cover;
-  }
-  .event-card .card-img-overlay {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.5); /* Optional */
-  }
+#seeMoreNewsBtn, #seeLessNewsBtn, #seeMoreBtn, #seeLessBtn {
+    background-color: #ce3813;
+    border-color: #ce3813;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
 
-  /* currenly update text in event card to bottom */
+#seeMoreNewsBtn:hover, #seeLessNewsBtn:hover, #seeMoreBtn:hover, #seeLessBtn:hover {
+    background-color: #ce3813;
+    transform: scale(1.05);
+}
+
+#backToTopBtn {
+    background-color: #ce3813;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+}
+
+#backToTopBtn:hover {
+    background-color: #ce3813;
+}
+
+body.dark-mode {
+    background-color: #222;
+    color: #fff;
+}
+
+body.dark-mode .bg-body-tertiary {
+    background-color: #444 !important;
+}
+
+body.dark-mode .offcanvas-start {
+    background-color: #444;
+}
+
+body.dark-mode .btm-bar {
+    background-color: #444 !important;
+}
+
+body.dark-mode #bodyPage h1,
+body.dark-mode #location h1,
+body.dark-mode h2 {
+    color: #fff;
+}
+
+body.dark-mode .featurette .lead {
+    color: #ddd;
+}
+
+body.dark-mode .card-img-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+body.dark-mode #languageToggle {
+    background-color: #ffffff !important;
+    color: #ce3813 !important;
+    border-color: #ce3813 !important;
+}
+
+body.dark-mode #languageToggle:hover {
+    background-color: #f0f0f0 !important;
+    color: #6b3510 !important;
+}
+
+body.dark-mode .navbar-toggler-icon {
+    filter: brightness(0) invert(1); /* Keep white in dark mode */
+}
+
+body.dark-mode .navbar-toggler:hover .navbar-toggler-icon {
+    filter: brightness(0) invert(1) opacity(0.8);
+}
+
+@keyframes appear {
+    from {
+        opacity: 0.8;
+        scale: 0.8;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
