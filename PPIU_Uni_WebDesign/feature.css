@@ -47,7 +47,7 @@ body.khmer {
 
 .navbar-brand {
     font-size: 1.8rem;
-    color: #fff;
+    color: #fff !important;
     font-weight: 700;
     transition: color 0.3s ease;
 }
@@ -75,6 +75,10 @@ body.khmer {
 
 .navbar-toggler:hover .navbar-toggler-icon {
     filter: brightness(0) invert(1) opacity(0.8);
+}
+
+.home-nav, .menu-nav{
+    color: #ddd !important;
 }
 
 .offcanvas-start {
@@ -252,7 +256,7 @@ h2 {
 }
 
 .event-card:hover, .card:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -263,7 +267,7 @@ h2 {
 }
 
 .event-card:hover .card-img, .card:hover .card-img-top {
-    transform: scale(1.1);
+    transform: scale(1.02);
 }
 
 .card-img-overlay {
@@ -306,7 +310,7 @@ h2 {
 }
 
 .featurette .col-md-5:hover img {
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 .featurette .lead {
@@ -537,26 +541,26 @@ body.dark-mode #backToTopBtn:hover {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; }
+    from { opacity: 0.5; }
     to { opacity: 1; }
 }
 
 @keyframes fadeInDown {
-    from { opacity: 0; transform: translateY(-20px); }
+    from { opacity: 0; transform: translateY(0px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadeInLeft {
-    from { opacity: 0; transform: translateX(-20px); }
+    from { opacity: 0; transform: translateX(-10px); }
     to { opacity: 1; transform: translateX(0); }
 }
 
 @keyframes slideUp {
-    from { opacity: 0; transform: translateY(20px); }
+    from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes slideIn {
-    from { opacity: 0; transform: translateX(-50px); }
+    from { opacity: 0; transform: translateX(10px); }
     to { opacity: 1; transform: translateX(0); }
 }
