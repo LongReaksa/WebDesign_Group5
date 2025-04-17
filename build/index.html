@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 transition-colors duration-200">
+  <nav class="bg-white dark:bg-gray-800 shadow-md p-6">
+    <div class="max-w-8xl mx-auto px-4">
+      <div class="flex justify-between h-16">
+        <!-- Logo and primary nav section -->
+        <div class="flex">
+          <!-- Logo -->
+          <div class="flex-shrink-0 flex items-center">
+            <a href="#">
+              <img src="/images/logo_2.jpg" alt="" class="h-20 dark:text-blue-400">
+            </a>
+          </div>
+          
+          <!-- Primary Navigation (hidden on mobile) -->
+          <div class="hidden md:ml-6 lg:flex md:items-center md:space-x-4">
+            <!-- Admission Dropdown -->
+            <div class="relative group">
+              <a href="#admission" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">
+                ADMISSION
+              </a>
+              <div class="absolute hidden group-hover:block bg-white dark:bg-gray-700 shadow-lg rounded-md mt-2 w-60 z-50">
+                <div class="py-2">
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    ASSOCIATE
+                  </a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    MASTER
+                  </a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    BACHELOR
+                  </a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    DOCTORAL
+                  </a>
+                </div>
+              </div>
+            </div>
+        
+            <!-- Faculty Dropdown -->
+            <div class="relative group">
+              <a href="#Academic" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">
+                ACADEMIC
+              </a>
+              <div class="absolute hidden group-hover:block bg-white dark:bg-gray-700 shadow-lg rounded-md mt-2 w-60 z-50">
+                <div class="py-2">
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Faculty of Science and technology
+                  </a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Faculty of Business and Tourism
+                  </a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Faculty of Law and Economics
+                  </a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Faculty of Education Science
+                  </a>
+                </div>
+              </div>
+            </div>
+        
+            <!-- Alumni Dropdown -->
+            <div class="relative group">
+              <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">
+                Alumni
+              </a>
+              <div class="absolute hidden group-hover:block bg-white dark:bg-gray-700 shadow-lg rounded-md mt-2 w-60 z-50">
+                <div class="py-2">
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Study tour abroad
+                  </a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Study tour in the country
+                  </a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Internship abroad
+                  </a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Internship in the country
+                  </a>
+                </div>
+              </div>
+            </div>
+        
+            <!-- Other Navigation Items (without dropdowns) -->
+            <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">About</a>
+            <!-- Alumni Dropdown -->
+            <div class="relative group">
+              <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">
+                Study materials
+              </a>
+              <div class="absolute hidden group-hover:block bg-white dark:bg-gray-700 shadow-lg rounded-md mt-2 w-60 z-50">
+                <div class="py-2">
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Library
+                  </a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Meeting room
+                  </a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Classroom
+                  </a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Music room
+                  </a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Restaurant
+                  </a>
+                </div>
+              </div>
+          </div>
+          <!-- Alumni Dropdown -->
+          <div class="relative group">
+            <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">
+              Event
+            </a>
+            <div class="absolute hidden group-hover:block bg-white dark:bg-gray-700 shadow-lg rounded-md mt-2 w-60 z-50">
+              <div class="py-2">
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                Scholarship
+                </a>
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                  Partners
+                </a>
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                  Student Loans
+                </a>
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                  Job Announcements
+                </a>
+              </div>
+            </div>
+          </div>
+            <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">Contact</a>
+          </div>
+        </div>
+        
+        <!-- Secondary Navigation (dark mode toggle, language selector, mobile menu button) -->
+        <div class="flex items-center">
+          <!-- Dark Mode Toggle -->
+          <button onclick="toggleDarkMode()" class="p-2 rounded-md text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 focus:outline-none">
+            <!-- Sun icon (visible in dark mode) -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="hidden dark:block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
+            <!-- Moon icon (visible in light mode) -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="block dark:hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            </svg>
+          </button>
+          
+          <!-- Language Selector -->
+          <div class="ml-3 relative">
+            <div>
+              <button type="button" class="flex items-center text-sm text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 focus:outline-none" id="language-menu-button" aria-expanded="false" aria-haspopup="true" onclick="document.getElementById('language-dropdown').classList.toggle('hidden')">
+                <span class="sr-only">Open language menu</span>
+                <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+                </svg>
+                <span class="ml-1">EN</span>
+                <svg class="ml-1 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+              </button>
+            </div>
+            
+            <!-- Dropdown -->
+            <div id="language-dropdown" class="hidden origin-top-right absolute right-0 mt-2 w-40 rounded-md shadow-lg bg-white dark:bg-gray-800 ring-1 ring-black ring-opacity-5 focus:outline-none z-10" role="menu" aria-orientation="vertical" aria-labelledby="language-menu-button" tabindex="-1">
+              <div class="py-1" role="none">
+                <a href="#" onclick="changeLanguage('en'); document.getElementById('language-dropdown').classList.add('hidden')" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700" role="menuitem" tabindex="-1">English</a>
+                <a href="#" onclick="changeLanguage('fr'); document.getElementById('language-dropdown').classList.add('hidden')" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700" role="menuitem" tabindex="-1">Khmer</a>
+                <a href="#" onclick="changeLanguage('es'); document.getElementById('language-dropdown').classList.add('hidden')" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700" role="menuitem" tabindex="-1">Brazil</a>
+                <a href="#" onclick="changeLanguage('de'); document.getElementById('language-dropdown').classList.add('hidden')" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700" role="menuitem" tabindex="-1">Japan</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Mobile menu button -->
+          <div class="ml-4 flex items-center lg:hidden">
+            <button type="button" class="bg-white dark:bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" aria-controls="mobile-menu" aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div class="hidden lg:hidden" id="mobile-menu">
+      <div class="px-2 pt-2 pb-3 space-y-1 mt-10 bg-white dark:bg-gray-800">
+        <!-- Admission Dropdown -->
+        <div class="relative group">
+          <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">
+            ADMISSION
+          </a>
+          <div class="absolute hidden group-hover:block bg-white dark:bg-gray-700 shadow-lg rounded-md mt-2 w-60 z-50">
+            <div class="py-2">
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                ASSOCIATE
+              </a>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                MASTER
+              </a>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                BACHELOR
+              </a>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                DOCTORAL
+              </a>
+            </div>
+          </div>
+        </div>
+            <!-- Faculty Dropdown -->
+            <div class="relative group">
+              <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">
+                ACADEMIC
+              </a>
+              <div class="absolute hidden group-hover:block bg-white dark:bg-gray-700 shadow-lg rounded-md mt-2 w-60 z-50">
+                <div class="py-2">
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Faculty of Science and technology
+                  </a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Faculty of Business and Tourism
+                  </a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Faculty of Law and Economics
+                  </a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Faculty of Education Science
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Alumni Dropdown -->
+            <div class="relative group">
+              <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">
+                Alumni
+              </a>
+              <div class="absolute hidden group-hover:block bg-white dark:bg-gray-700 shadow-lg rounded-md mt-2 w-60 z-50">
+                <div class="py-2">
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Study tour abroad
+                  </a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Study tour in the country
+                  </a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Internship abroad
+                  </a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Internship in the country
+                  </a>
+                </div>
+              </div>
+            </div>
+        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">About</a>
+        <!-- Alumni Dropdown -->
+        <div class="relative group">
+          <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">
+            Study materials
+          </a>
+          <div class="absolute hidden group-hover:block bg-white dark:bg-gray-700 shadow-lg rounded-md mt-2 w-60 z-50">
+            <div class="py-2">
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                Library
+              </a>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                Meeting room
+              </a>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                Classroom
+              </a>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                Music room
+              </a>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                Restaurant
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Alumni Dropdown -->
+        <div class="relative group">
+          <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">
+            Event
+          </a>
+          <div class="absolute hidden group-hover:block bg-white dark:bg-gray-700 shadow-lg rounded-md mt-2 w-60 z-50">
+            <div class="py-2">
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+              Scholarship
+              </a>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                Partners
+              </a>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                Student Loans
+              </a>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                Job Announcements
+              </a>
+            </div>
+          </div>
+        </div>
+          <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Contact</a>
+        </div>
+      </div>
+  </nav>
+  
+  <!-- page content -->
+  <main>
+      <!-- Background Banner -->
+    <section  class="h-[84vh] w-full overflow-hidden relative">
+      <div class="banner flex transition-transform duration-500 ease-in-out h-full w-full absolute top-0 left-0" id="banner">
+        <div class="w-screen h-screen flex-shrink-0 relative">
+          <img src="/images/banner_4.JPG" alt="Banner image 1" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center px-8 text-white">
+              <h1 class="text-5xl font-bold mb-4">Welcome to Our Website</h1>
+              <p class="text-xl max-w-2xl text-center mb-8">Discover amazing products and services that will transform your experience.</p>
+              <a href="">
+                <button class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300">Contact Us</button>
+              </a>
+            </div>
+        </div>
+          
+        <div class="w-screen h-screen flex-shrink-0 relative">
+          <img src="/images/banner_4.JPG" alt="Banner image 2" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center px-8 text-white">
+            <h1 class="text-5xl font-bold mb-4">Innovative Solutions</h1>
+            <p class="text-xl max-w-2xl text-center mb-8">We provide cutting-edge technology to enhance your daily life.</p>
+            <a href="">
+              <button class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300">Contact Us</button>
+            </a>
+          </div>
+        </div>
+          
+          <div class="w-screen h-screen flex-shrink-0 relative">
+              <img src="/images/banner_4.JPG" alt="Banner image 3" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center px-8 text-white">
+                  <h1 class="text-5xl font-bold mb-4">Sustainable Choices</h1>
+                  <p class="text-xl max-w-2xl text-center mb-8">Join us in our mission to create a better future for our planet.</p>
+                  <a href="">
+                    <button class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300">Contact Us</button>
+                  </a>
+              </div>
+          </div>
+          
+          <div class="w-screen h-screen flex-shrink-0 relative">
+              <img src="/images/banner_4.JPG" alt="Banner image 4" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center px-8 text-white">
+                  <h1 class="text-5xl font-bold mb-4">24/7 Support</h1>
+                  <p class="text-xl max-w-2xl text-center mb-8">Our team is always available to assist you with any questions or concerns.</p>
+                  <a href="">
+                    <button class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300">Contact Us</button>
+                  </a>
+              </div>
+          </div>
+      </div>
+      
+      <!-- Navigation Controls -->
+      <button class="absolute top-1/2 left-6 transform -translate-y-1/2 bg-white bg-opacity-70 hover:bg-opacity-90 text-gray-800 border-none w-12 h-12 rounded-full flex justify-center items-center text-2xl cursor-pointer transition-colors duration-300 z-20" id="prev">&#10094;</button>
+      <button class="absolute top-1/2 right-6 transform -translate-y-1/2 bg-white bg-opacity-70 hover:bg-opacity-90 text-gray-800 border-none w-12 h-12 rounded-full flex justify-center items-center text-2xl cursor-pointer transition-colors duration-300 z-20" id="next">&#10095;</button>
+      
+      <div class="controls absolute bottom-8 left-0 right-0 flex justify-center space-x-4 z-20" id="dots-container"></div>
+    </section>
+  </main>
+
+
+  <section>
+    <div id="admission" class="overflow-hidden bg-white py-24 sm:py-32 dark:bg-gray-800">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+          <div class="lg:pr-8 lg:pt-4">
+            <div class="lg:max-w-lg">
+              <h2 class="text-base/7 font-semibold text-indigo-700">Phnom Penh International University</h2>
+              <p class="mt-2 text-pretty text-4xl font-semibold tracking-tight text-black sm:text-5xl">REGULATION ON ENROLMENT</p>
+              <p class="mt-6 text-lg/8 text-gray-600 dark:text-gray-300">ការចុះឈ្មោះចូលរៀននៅសាកលវិទ្យាល័យភ្នំពេញអន្តរជាតិ (PPIU) ផ្តល់សិទ្ធិឲ្យនិស្សិតគ្រប់រូបដាក់ពាក្យចូលរៀនដោយគ្រាន់តែបំពេញលក្ខខណ្ឌចាំបាច់ដូចខាងក្រោម៖</p>
+              <dl class="mt-10 max-w-xl space-y-8 text-base/7 text-gray-600 lg:max-w-none">
+                <div class="relative pl-9">
+                  <dt class="inline font-semibold text-gray-900 dark:text-indigo-700">
+                    <!-- <svg class="absolute left-1 top-1 size-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                      <path fill-rule="evenodd" d="M5.5 17a4.5 4.5 0 0 1-1.44-8.765 4.5 4.5 0 0 1 8.302-3.046 3.5 3.5 0 0 1 4.504 4.272A4 4 0 0 1 15 17H5.5Zm3.75-2.75a.75.75 0 0 0 1.5 0V9.66l1.95 2.1a.75.75 0 1 0 1.1-1.02l-3.25-3.5a.75.75 0 0 0-1.1 0l-3.25 3.5a.75.75 0 1 0 1.1 1.02l1.95-2.1v4.59Z" clip-rule="evenodd" />
+                    </svg> -->
+                    <i class="fa-solid fa-graduation-cap absolute left-1 top-1 size-5 text-indigo-600"></i>
+                    Associate
+                  </dt>
+                  <dd class="inline">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto, illum.
+                  </dd>
+                </div>
+                <div class="relative pl-9">
+                  <dt class="inline font-semibold text-gray-900 dark:text-indigo-700">
+                    <!-- <svg class="absolute left-1 top-1 size-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                      <path fill-rule="evenodd" d="M10 1a4.5 4.5 0 0 0-4.5 4.5V9H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6a2 2 0 0 0-2-2h-.5V5.5A4.5 4.5 0 0 0 10 1Zm3 8V5.5a3 3 0 1 0-6 0V9h6Z" clip-rule="evenodd" />
+                    </svg> -->
+                    <i class="fa-solid fa-graduation-cap absolute left-1 top-1 size-5 text-indigo-600"></i>
+                    Master
+                  </dt>
+                  <dd class="inline">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.</dd>
+                </div>
+                <div class="relative pl-9">
+                  <dt class="inline font-semibold text-gray-900 dark:text-indigo-700">
+                    <!-- <svg class="absolute left-1 top-1 size-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                      <path d="M4.632 3.533A2 2 0 0 1 6.577 2h6.846a2 2 0 0 1 1.945 1.533l1.976 8.234A3.489 3.489 0 0 0 16 11.5H4c-.476 0-.93.095-1.344.267l1.976-8.234Z" />
+                      <path fill-rule="evenodd" d="M4 13a2 2 0 1 0 0 4h12a2 2 0 1 0 0-4H4Zm11.24 2a.75.75 0 0 1 .75-.75H16a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75V15Zm-2.25-.75a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75H13a.75.75 0 0 0 .75-.75V15a.75.75 0 0 0-.75-.75h-.01Z" clip-rule="evenodd" />
+                    </svg> -->
+                    <i class="fa-solid fa-graduation-cap absolute left-1 top-1 size-5 text-indigo-600"></i>
+                    Bachelor
+                  </dt>
+                  <dd class="inline">Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.</dd>
+                </div>
+                <div class="relative pl-9">
+                  <dt class="inline font-semibold text-gray-900 dark:text-indigo-700">
+                    <!-- <svg class="absolute left-1 top-1 size-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                      <path fill-rule="evenodd" d="M10 1a4.5 4.5 0 0 0-4.5 4.5V9H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6a2 2 0 0 0-2-2h-.5V5.5A4.5 4.5 0 0 0 10 1Zm3 8V5.5a3 3 0 1 0-6 0V9h6Z" clip-rule="evenodd" />
+                    </svg> -->
+                    <i class="fa-solid fa-graduation-cap absolute left-1 top-1 size-5 text-indigo-600"></i>
+                    Doctoral
+                  </dt>
+                  <dd class="inline">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+          <img src="/images/admission_1.JPG" alt="Product screenshot" class="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0" width="2432" height="1442">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Academic -->
+  <div id="Academic" class="container mx-auto p-6 max-w-6xl dark:text-white">
+    <header class="mb-12">
+      <h1 class="text-4xl font-bold text-center mb-8 text-blue-800">Academic Faculties</h1>
+      <div class="max-w-3xl mx-auto space-y-4">
+        <p class="text-base text-center">
+          Phnom Penh International University (PPIU) has its own important missions in the development of human resources with a real atmosphere of Quality, Excellence, and Innovation in order to prepare students to become professionals and also to be part of national, regional, and global developments. To achieve these missions, PPIU has carefully selected core programs with highly experienced and qualified lecturers to teach students more than just their discipline, dignity, and ethics.
+        </p>
+        <p class="text-base text-center">
+          Phnom Penh International University offers foreign language training and professional education at associate, bachelor, master, and doctoral levels. Foreign language training is available at the International Language Center (ILC), which is located within the university.
+        </p>
+      </div>
+    </header>
+    
+    <div id="faculty-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Faculty cards will be dynamically inserted here -->
+    </div>
+  </div>
+  <script src="/js/academic.js"></script>
+
+
+<section id="testimonial">
+  <div class="container pt-24">
+      <div class="text-center m-auto mb-20 md:w-1/2">
+          <h4 class="font-bold text-orange-500 mb-4 dark:text-blue-700 text-3xl">User Review</h4>
+          <h1 class="title dark:text-white">What Clients Say About Our App <br> After Use it</h1>
+      </div>
+      <!-- review container -->
+      <div class="mt-8">
+          <div id="user-pics-container" class="flex items-center justify-center flex-wrap">
+              <!-- User images will be inserted here by JavaScript -->
+          </div>
+
+          <div id="testimonials-container" class="grid place-items-center text-center m-auto md:w-4/5 min-h-[40vh]">
+              <!-- Testimonials will be inserted here by JavaScript -->
+          </div>
+      </div>
+  </div>
+</section>
+<script src="/js/student.js"></script>
+
+  <section id="contact">
+    <div class="container pt-16 pb-16">
+        <div class="text-center m-auto mb-20 md:w-1/2">
+            <h4 class="font-bold text-orange-500 mb-4">Have A Questation</h4>
+            <h1 class="title">Get In Touch</h1>
+        </div>
+
+        <form action="">
+            <div class="w-full m-auto text-center md:w-2/3">
+                <div class="text-black grid gap-6 mb-6 md:grid-cols-2">
+                    <input type="text" id="" class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-3
+                    focus:outline-none focus:border-orange-500" placeholder="Name....">
+
+                    <input type="email" id="" class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-3
+                    focus:outline-none focus:border-orange-500" placeholder="Gmail...">
+
+                    <input type="tel" id="" class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-3
+                    focus:outline-none focus:border-orange-500" placeholder="Phone....">
+
+                    <input type="text" id="" class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-3
+                    focus:outline-none focus:border-orange-500" placeholder="Company....">
+                </div>
+
+                <textarea rows="4" class="text-black bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-3
+                focus:outline-none focus:border-orange-500" placeholder="Massage......"></textarea>
+
+                <button class="btn mt-10">Send Massage</button>
+            </div>
+        </form>
+    </div>
+  </section>
+
+  
+
+
+
+  
+
+
+
+</body>
+</html>
+<script src="/js/process.js"></script>
+<script src="/js/partners.js"></script>
+<script src="/js/exchange.js"></script>
