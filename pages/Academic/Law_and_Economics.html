@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 transition-colors duration-200">
+  <nav class="bg-white dark:bg-gray-800 shadow-md p-6">
+    <div class="max-w-8xl mx-auto px-4">
+      <div class="flex justify-between h-16">
+        <!-- Logo and primary nav section -->
+        <div class="flex">
+          <!-- Logo -->
+          <div class="flex-shrink-0 flex items-center">
+            <a href="#">
+              <img src="/images/logo_2.jpg" alt="" class="h-20 dark:text-blue-400">
+            </a>
+          </div>
+          
+          <!-- Primary Navigation (hidden on mobile) -->
+          <div class="hidden md:ml-6 lg:flex md:items-center md:space-x-4">
+            <!-- Admission Dropdown -->
+            <div class="relative group">
+              <a href="#admission" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400" onclick="goToPage(event, '/pages/admission.html')">
+                ADMISSION
+              </a>
+              <div class="absolute hidden group-hover:block bg-white dark:bg-gray-700 shadow-lg rounded-md mt-2 w-60 z-50">
+                <div class="py-2">
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600" onclick="goToPage(event, '/pages/associate.html')">
+                    ASSOCIATE
+                  </a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600" onclick="goToPage(event, '/pages/master.html')">
+                    MASTER
+                  </a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600" onclick="goToPage(event, '/pages/bachelor.html')">
+                    BACHELOR
+                  </a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600" onclick="goToPage(event, '/pages/doctoral.html')">
+                    DOCTORAL
+                  </a>
+                </div>
+              </div>
+            </div>
+        
+            <!-- Faculty Dropdown -->
+            <div class="relative group">
+              <a href="#Academic" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">
+                ACADEMIC
+              </a>
+              <div class="absolute hidden group-hover:block bg-white dark:bg-gray-700 shadow-lg rounded-md mt-2 w-60 z-50">
+                <div class="py-2">
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Faculty of Science and technology
+                  </a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Faculty of Business and Tourism
+                  </a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Faculty of Law and Economics
+                  </a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Faculty of Education Science
+                  </a>
+                </div>
+              </div>
+            </div>
+        
+            <!-- Alumni Dropdown -->
+            <div class="relative group">
+              <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">
+                Alumni
+              </a>
+              <div class="absolute hidden group-hover:block bg-white dark:bg-gray-700 shadow-lg rounded-md mt-2 w-60 z-50">
+                <div class="py-2">
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Study tour abroad
+                  </a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Study tour in the country
+                  </a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Internship abroad
+                  </a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Internship in the country
+                  </a>
+                </div>
+              </div>
+            </div>
+        
+            <!-- Other Navigation Items (without dropdowns) -->
+            <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">About</a>
+            <!-- Alumni Dropdown -->
+            <div class="relative group">
+              <a href="#Study_materials" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">
+                Study materials
+              </a>
+              <div class="absolute hidden group-hover:block bg-white dark:bg-gray-700 shadow-lg rounded-md mt-2 w-60 z-50">
+                <div class="py-2">
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Library
+                  </a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Meeting room
+                  </a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Classroom
+                  </a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Music room
+                  </a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Restaurant
+                  </a>
+                </div>
+              </div>
+          </div>
+          <!-- Alumni Dropdown -->
+          <div class="relative group">
+            <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">
+              Event
+            </a>
+            <div class="absolute hidden group-hover:block bg-white dark:bg-gray-700 shadow-lg rounded-md mt-2 w-60 z-50">
+              <div class="py-2">
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                Scholarship
+                </a>
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                  Partners
+                </a>
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                  Student Loans
+                </a>
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                  Job Announcements
+                </a>
+              </div>
+            </div>
+          </div>
+            <a href="#Contact" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">Contact</a>
+          </div>
+        </div>
+        
+        <!-- Secondary Navigation (dark mode toggle, language selector, mobile menu button) -->
+        <div class="flex items-center">
+          <!-- Dark Mode Toggle -->
+          <button onclick="toggleDarkMode()" class="p-2 rounded-md text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 focus:outline-none">
+            <!-- Sun icon (visible in dark mode) -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="hidden dark:block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
+            <!-- Moon icon (visible in light mode) -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="block dark:hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            </svg>
+          </button>
+          
+          <!-- Language Selector -->
+          <div class="ml-3 relative">
+            <div>
+              <button type="button" class="flex items-center text-sm text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 focus:outline-none" id="language-menu-button" aria-expanded="false" aria-haspopup="true" onclick="document.getElementById('language-dropdown').classList.toggle('hidden')">
+                <span class="sr-only">Open language menu</span>
+                <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+                </svg>
+                <span class="ml-1">EN</span>
+                <svg class="ml-1 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+              </button>
+            </div>
+            
+            <!-- Dropdown -->
+            <div id="language-dropdown" class="hidden origin-top-right absolute right-0 mt-2 w-40 rounded-md shadow-lg bg-white dark:bg-gray-800 ring-1 ring-black ring-opacity-5 focus:outline-none z-10" role="menu" aria-orientation="vertical" aria-labelledby="language-menu-button" tabindex="-1">
+              <div class="py-1" role="none">
+                <a href="#" onclick="changeLanguage('en'); document.getElementById('language-dropdown').classList.add('hidden')" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700" role="menuitem" tabindex="-1">English</a>
+                <a href="#" onclick="changeLanguage('fr'); document.getElementById('language-dropdown').classList.add('hidden')" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700" role="menuitem" tabindex="-1">Khmer</a>
+                <a href="#" onclick="changeLanguage('es'); document.getElementById('language-dropdown').classList.add('hidden')" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700" role="menuitem" tabindex="-1">Brazil</a>
+                <a href="#" onclick="changeLanguage('de'); document.getElementById('language-dropdown').classList.add('hidden')" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700" role="menuitem" tabindex="-1">Japan</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Mobile menu button -->
+          <div class="ml-4 flex items-center lg:hidden">
+            <button type="button" class="bg-white dark:bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" aria-controls="mobile-menu" aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div class="hidden lg:hidden" id="mobile-menu">
+      <div class="px-2 pt-2 pb-3 space-y-1 mt-10 bg-white dark:bg-gray-800">
+        <!-- Admission Dropdown -->
+        <div class="relative group">
+          <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">
+            ADMISSION
+          </a>
+          <div class="absolute hidden group-hover:block bg-white dark:bg-gray-700 shadow-lg rounded-md mt-2 w-60 z-50">
+            <div class="py-2">
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                ASSOCIATE
+              </a>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                MASTER
+              </a>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                BACHELOR
+              </a>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                DOCTORAL
+              </a>
+            </div>
+          </div>
+        </div>
+            <!-- Faculty Dropdown -->
+            <div class="relative group">
+              <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">
+                ACADEMIC
+              </a>
+              <div class="absolute hidden group-hover:block bg-white dark:bg-gray-700 shadow-lg rounded-md mt-2 w-60 z-50">
+                <div class="py-2">
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Faculty of Science and technology
+                  </a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Faculty of Business and Tourism
+                  </a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Faculty of Law and Economics
+                  </a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Faculty of Education Science
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Alumni Dropdown -->
+            <div class="relative group">
+              <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">
+                Alumni
+              </a>
+              <div class="absolute hidden group-hover:block bg-white dark:bg-gray-700 shadow-lg rounded-md mt-2 w-60 z-50">
+                <div class="py-2">
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Study tour abroad
+                  </a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Study tour in the country
+                  </a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Internship abroad
+                  </a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Internship in the country
+                  </a>
+                </div>
+              </div>
+            </div>
+        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">About</a>
+        <!-- Alumni Dropdown -->
+        <div class="relative group">
+          <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">
+            Study materials
+          </a>
+          <div class="absolute hidden group-hover:block bg-white dark:bg-gray-700 shadow-lg rounded-md mt-2 w-60 z-50">
+            <div class="py-2">
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                Library
+              </a>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                Meeting room
+              </a>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                Classroom
+              </a>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                Music room
+              </a>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                Restaurant
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Alumni Dropdown -->
+        <div class="relative group">
+          <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">
+            Event
+          </a>
+          <div class="absolute hidden group-hover:block bg-white dark:bg-gray-700 shadow-lg rounded-md mt-2 w-60 z-50">
+            <div class="py-2">
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+              Scholarship
+              </a>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                Partners
+              </a>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                Student Loans
+              </a>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                Job Announcements
+              </a>
+            </div>
+          </div>
+        </div>
+          <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Contact</a>
+        </div>
+      </div>
+  </nav>
+
+
+
+
+  <section class="bg-white text-gray-800 py-12 px-6 md:px-20 leading-relaxed">
+    <div class="max-w-6xl mx-auto space-y-10">
+  
+      <!-- Title -->
+      <h2 class="text-3xl md:text-4xl font-bold text-blue-900 text-center">មហាវិទ្យាល័យនីតិសាស្រ្ត និងសេដ្ឋកិច្ច</h2>
+  
+      <!-- 1. Introduction -->
+      <div>
+        <h3 class="text-2xl font-semibold text-blue-700 mb-2">១. សេចក្តីផ្តើម</h3>
+        <p class="text-justify">
+          មហាវិទ្យាល័យនីតិសាស្រ្ត និងសេដ្ឋកិច្ចជាមហាវិទ្យាល័យធំមួយក្នុងចំណោមមហាវិទ្យាល័យទាំង ០៤ ដែលបានបណ្តុះបណ្តាលជំនាញរួមមាន៖ ហិរញ្ញវត្ថុ​ និងធនាគារ អភិវឌ្ឍសេដ្ឋកិច្ច ច្បាប់ និងរដ្ឋបាលសាធារណៈ។ ដើម្បីឆ្លើយតបនឹងតម្រូវការនៃទីផ្សារការងារក្នុងបរិបទនៃសមាហរណកម្មអាស៊ាននាពេលខាងមុខ... [បន្តអត្ថបទ]
+        </p>
+      </div>
+  
+      <!-- 2. Vision -->
+      <div>
+        <h3 class="text-2xl font-semibold text-blue-700 mb-2">២. ចក្ខុវិស័យ</h3>
+        <p class="text-justify">
+          មហាវិទ្យាល័យនីតិសាស្រ្ត និងសេដ្ឋកិច្ចនៃសាកលវិទ្យាល័យភ្នំពេញអន្តរជាតិ និងចូលរួមចំណែកបណ្តុះបណ្តាលធនធានមនុស្សប្រកបដោយគុណភាព... [បន្តអត្ថបទ]
+        </p>
+      </div>
+  
+      <!-- 3. Mission -->
+      <div>
+        <h3 class="text-2xl font-semibold text-blue-700 mb-2">៣. បេសកកម្ម</h3>
+        <ul class="list-disc list-inside space-y-2 text-justify">
+          <li>រៀបចំកម្មវិធីសិក្សាថ្មី ស្របតាមកម្មវិធីបណ្តុះបណ្តាលក្នុងមហាវិទ្យាល័យ និងគ្រប់កម្រិតសិក្សា។</li>
+          <li>បង្កើនម៉ោងអនុវត្តជាក់ស្តែងដើម្បីពង្រឹងបំនិនអនុវត្ត (Soft skills)...</li>
+          <li>បង្កើនការងារសហការក្នុងការស្វែងរកអង្គភាពចុះហ្វឹកហាត់ការងារ និងឱកាសការងារ។</li>
+        </ul>
+      </div>
+  
+      <!-- 4. Goals -->
+      <div>
+        <h3 class="text-2xl font-semibold text-blue-700 mb-2">៤. គោលដៅ</h3>
+        <ul class="list-decimal list-inside space-y-2 text-justify">
+          <li>ត្រួតពិនិត្យ និងវាយតម្លៃលើដំណើរការអនុវត្តកម្មវិធីសិក្សា និងការសិក្សារបស់និស្សិត។</li>
+          <li>ពង្រឹងសហប្រតិបត្តិការជាមួយដៃគូរក្នុងវិស័យហិរញ្ញវត្ថុ និងច្បាប់។</li>
+          <li>ជម្រុញការសិក្សាស្រាវជ្រាវបន្ថែម និងបង្កើតទំនើបកម្មសម្ភារៈឧបករណ៍។</li>
+          <li>ផ្តល់ចំណេះដឹងប្រកបដោយគុណភាព និងប្រសិទ្ធភាពខ្ពស់។</li>
+          <li>អភិវឌ្ឍមូលដ្ឋានហេដ្ឋារចនាសម្ព័ន្ធ និងជ្រើសរើសគ្រូបង្រៀនដែលមានទេពកោសល្យ។</li>
+        </ul>
+      </div>
+  
+      <!-- 5. Professional Skills -->
+      <div>
+        <h3 class="text-2xl font-semibold text-blue-700 mb-2">៥. ជំនាញវិជ្ជាជីវៈ</h3>
+        <p class="text-justify mb-4">
+          កម្មវិធីនេះរៀបចំឡើងក្នុងគោលបំណងសម្រួលអ្នកសិក្សាឲ្យទទួលបានជំនាញពិតប្រាកដ ដោយផ្សារភ្ជាប់ទ្រឹស្តីនិងអនុវត្ត... 
+        </p>
+        <ul class="list-disc list-inside space-y-1 text-justify">
+          <li>Financial Management and Analysis</li>
+          <li>Financial Management and Planning</li>
+          <li>Marketing</li>
+          <li>Business Communication</li>
+          <li>Business Law</li>
+        </ul>
+      </div>
+  
+    </div>
+  </section>
+  <!-- Professional Skills in English -->
+<section class="bg-gray-50 text-gray-800 py-12 px-6 md:px-20 leading-relaxed">
+    <div class="max-w-6xl mx-auto space-y-10">
+      <h2 class="text-3xl md:text-4xl font-bold text-blue-900 text-center">Professional Skills</h2>
+  
+      <!-- 1. Financial Management and Analysis -->
+      <div>
+        <h3 class="text-xl font-semibold text-blue-700 mb-2">1. Financial Management and Analysis</h3>
+        <p class="text-justify">
+          This course is designed to prepare students to interpret and analyze financial statements for tasks involving credit and security analyses, lending and investment decisions, and other decisions that must rely on financial data. It explores in greater depth financial reporting topics from the perspective of financial statement users. Students develop a sufficient understanding of the concepts and recording procedures to interpret various disclosures in an informed manner. Topics include profitability and risk assessments, competitor analysis, bankruptcy prediction, and valuation.
+        </p>
+      </div>
+  
+      <!-- 2. Financial Management and Planning -->
+      <div>
+        <h3 class="text-xl font-semibold text-blue-700 mb-2">2. Financial Management and Planning</h3>
+        <p class="text-justify">
+          This course focuses on financial management, showing managers how to interface with accounting and finance departments and helping them understand how firms meet financial objectives using decision-making strategies. It covers financial tools and techniques for maximizing firm value through capital budgeting, capital structure, and working capital management. Topics also include multinational financial management, risk management, and more.
+        </p>
+      </div>
+  
+      <!-- 3. Marketing -->
+      <div>
+        <h3 class="text-xl font-semibold text-blue-700 mb-2">3. Marketing</h3>
+        <p class="text-justify">
+          This course focuses on communicating the value of a product or service to customers to facilitate sales. It covers target market selection, market segmentation, consumer behavior, and value-based advertising. From a societal perspective, marketing links material needs with economic responses and builds long-term relationships through exchange processes.
+        </p>
+      </div>
+  
+      <!-- 4. Business Communication -->
+      <div>
+        <h3 class="text-xl font-semibold text-blue-700 mb-2">4. Business Communication</h3>
+        <p class="text-justify">
+          This course includes topics such as marketing, brand management, customer relations, consumer behavior, advertising, public relations, corporate communication, community engagement, and event management. It is closely tied to professional and technical communication, aiming to enhance organizational and interpersonal effectiveness.
+        </p>
+      </div>
+  
+      <!-- 5. Business Law -->
+      <div>
+        <h3 class="text-xl font-semibold text-blue-700 mb-2">5. Business Law</h3>
+        <p class="text-justify">
+          This course covers the rights, relations, and conduct of individuals and businesses involved in commerce, merchandising, trade, and sales. Considered a branch of civil law, it addresses both private and public law issues related to business activities.
+        </p>
+      </div>
+    </div>
+  </section>
+  <!-- Associate Degree: Banking and Finance Program -->
+<section class="bg-white text-gray-800 py-12 px-6 md:px-20 leading-relaxed">
+    <div class="max-w-6xl mx-auto space-y-6">
+      <h2 class="text-3xl md:text-4xl font-bold text-blue-900">៦.១ កម្មវិធីសិក្សាថ្នាក់បរិញ្ញាបត្ររង ហិរញ្ញវត្ថុ និងធនាគារ</h2>
+      <p class="text-justify">
+        ជំនាញហិរញ្ញវត្ថុ និងធនាគារ ផ្តោតសំខាន់លើទ្រឹស្តី និងការអនុវត្តជាក់ស្តែង ដើម្បីឲ្យនិស្សិតមានសមត្ថភាពជាក់ស្តែងក្នុងការងារ ដូចជា ក្នុងធនាគារ មីក្រូហិរញ្ញវត្ថុ ក្រុមហ៊ុន អង្គការជាតិ និងអន្តរជាតិ។ កម្មវិធីសិក្សាផ្ដល់នូវជំនាញសមស្របក្នុងរយៈពេលខ្លីសម្រាប់អនាគតការងារ។
+      </p>
+  
+      <!-- Table Section -->
+      <div class="overflow-x-auto border rounded-lg">
+        <table class="min-w-full text-left text-sm">
+          <thead class="bg-blue-800 text-white">
+            <tr>
+              <th class="px-4 py-2">ឆ្នាំសិក្សា</th>
+              <th class="px-4 py-2">ឆមាសទី ១</th>
+              <th class="px-4 py-2">ក្រេឌីត</th>
+              <th class="px-4 py-2">ឆមាសទី ២</th>
+              <th class="px-4 py-2">ក្រេឌីត</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-200">
+            <!-- Year 1 -->
+            <tr class="bg-gray-100 font-semibold">
+              <td class="px-4 py-2" rowspan="6">ឆ្នាំទី ១</td>
+              <td class="px-4 py-2">Principles Accounting</td>
+              <td class="px-4 py-2">3(2-1)</td>
+              <td class="px-4 py-2">Financial Accounting</td>
+              <td class="px-4 py-2">3(2-1)</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2">Financial Accounting Practice POA</td>
+              <td class="px-4 py-2">3(0-3)</td>
+              <td class="px-4 py-2">Financial Accounting Practice</td>
+              <td class="px-4 py-2">3(0-3)</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2">MS Office</td>
+              <td class="px-4 py-2">3(2-1)</td>
+              <td class="px-4 py-2">English for Finance & Accounting II</td>
+              <td class="px-4 py-2">3(3-0)</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2">English for Finance & Accounting I</td>
+              <td class="px-4 py-2">3(3-0)</td>
+              <td class="px-4 py-2">Principles Management</td>
+              <td class="px-4 py-2">3(3-0)</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2">Introduction to Business</td>
+              <td class="px-4 py-2">3(3-0)</td>
+              <td class="px-4 py-2">Math for Business</td>
+              <td class="px-4 py-2">3(2-1)</td>
+            </tr>
+  
+            <!-- Year 2 -->
+            <tr class="bg-gray-100 font-semibold">
+              <td class="px-4 py-2" rowspan="5">ឆ្នាំទី ២</td>
+              <td class="px-4 py-2">Fundamentals of Economics</td>
+              <td class="px-4 py-2">3(2-1)</td>
+              <td class="px-4 py-2">Credit Management</td>
+              <td class="px-4 py-2">3(2-1)</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2">Money and Banking</td>
+              <td class="px-4 py-2">3(3-0)</td>
+              <td class="px-4 py-2">Financial Institution in Cambodia</td>
+              <td class="px-4 py-2">3(2-1)</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2">Principles of Marketing</td>
+              <td class="px-4 py-2">3(2-1)</td>
+              <td class="px-4 py-2">Financial Management and Planning</td>
+              <td class="px-4 py-2">3(2-1)</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2">English for Finance & Accounting II</td>
+              <td class="px-4 py-2">3(3-0)</td>
+              <td class="px-4 py-2">Microeconomics</td>
+              <td class="px-4 py-2">3(2-1)</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2">Banking Law</td>
+              <td class="px-4 py-2">3(2-1)</td>
+              <td class="px-4 py-2">Bank Service Accounting</td>
+              <td class="px-4 py-2">3(2-1)</td>
+            </tr>
+          </tbody>
+          <tfoot class="bg-blue-100 font-semibold">
+            <tr>
+              <td colspan="4" class="px-4 py-2 text-right">សរុបចំនួនក្រេឌីត</td>
+              <td class="px-4 py-2">60</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+  </section>
+  <!-- Bachelor's Degree: Banking and Finance Program -->
+<section class="bg-white text-gray-800 py-12 px-6 md:px-20 leading-relaxed">
+    <div class="max-w-7xl mx-auto space-y-6">
+      <h2 class="text-3xl md:text-4xl font-bold text-blue-900">៧.១ កម្មវិធីសិក្សាថ្នាក់បរិញ្ញាបត្រហិរញ្ញវត្ថុ និងធនាគារ</h2>
+      <p class="text-justify">
+        ការជ្រើសរើសជំនាញនេះ ផ្តល់ចំណេះដឹងរឹងមាំទាំងទ្រឹស្តី និងការអនុវត្តក្នុងវិស័យធនាគារ ហិរញ្ញវត្ថុ វិនិយោគ ការគ្រប់គ្រងហានិភ័យ វិស្វកម្មហិរញ្ញវត្ថុ និងទីផ្សារអន្តរជាតិ។ និស្សិតអាចធ្វើការនៅធនាគារ ស្ថាប័នហិរញ្ញវត្ថុ ក្រុមហ៊ុនឈ្មួញ និងអង្គភាពរដ្ឋ។
+      </p>
+  
+      <!-- Table Section -->
+      <div class="overflow-x-auto border rounded-lg">
+        <table class="min-w-full text-sm text-left">
+          <thead class="bg-blue-800 text-white">
+            <tr>
+              <th class="px-4 py-2">ឆ្នាំសិក្សា</th>
+              <th class="px-4 py-2">ឆមាសទី ១</th>
+              <th class="px-4 py-2">ក្រេឌីត</th>
+              <th class="px-4 py-2">ឆមាសទី ២</th>
+              <th class="px-4 py-2">ក្រេឌីត</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-200">
+            <!-- Year 1 -->
+            <tr class="bg-gray-100 font-semibold">
+              <td class="px-4 py-2" rowspan="5">ឆ្នាំទី ១</td>
+              <td class="px-4 py-2">Philosophy</td>
+              <td class="px-4 py-2">3(3-0)</td>
+              <td class="px-4 py-2">Public Administration</td>
+              <td class="px-4 py-2">3(3-0)</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2">Computer Literacy</td>
+              <td class="px-4 py-2">3(2-1)</td>
+              <td class="px-4 py-2">Maths for Business</td>
+              <td class="px-4 py-2">3(2-1)</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2">English for Finance & Accounting I</td>
+              <td class="px-4 py-2">3(3-0)</td>
+              <td class="px-4 py-2">English for Finance & Accounting II</td>
+              <td class="px-4 py-2">3(3-0)</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2">History of Economic Thoughts</td>
+              <td class="px-4 py-2">3(3-0)</td>
+              <td class="px-4 py-2">Principles of Accounting</td>
+              <td class="px-4 py-2">3(2-1)</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2">Introduction to Business</td>
+              <td class="px-4 py-2">3(3-0)</td>
+              <td class="px-4 py-2">Principles of Management</td>
+              <td class="px-4 py-2">3(3-0)</td>
+            </tr>
+  
+            <!-- Year 2 -->
+            <tr class="bg-gray-100 font-semibold">
+              <td class="px-4 py-2" rowspan="6">ឆ្នាំទី ២</td>
+              <td class="px-4 py-2">English for Finance & Accounting III</td>
+              <td class="px-4 py-2">3(3-0)</td>
+              <td class="px-4 py-2">Microeconomics I</td>
+              <td class="px-4 py-2">3(2-1)</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2">Economics</td>
+              <td class="px-4 py-2">3(2-1)</td>
+              <td class="px-4 py-2">Organizational Behavior</td>
+              <td class="px-4 py-2">3(3-0)</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2">Management Science</td>
+              <td class="px-4 py-2">3(2-1)</td>
+              <td class="px-4 py-2">Money and Banking</td>
+              <td class="px-4 py-2">3(3-0)</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2">Principles of Marketing</td>
+              <td class="px-4 py-2">3(3-0)</td>
+              <td class="px-4 py-2">Business Statistics</td>
+              <td class="px-4 py-2">3(2-1)</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2">Business Law</td>
+              <td class="px-4 py-2">3(3-0)</td>
+              <td class="px-4 py-2">Taxation</td>
+              <td class="px-4 py-2">3(2-1)</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2">Financial Accounting</td>
+              <td class="px-4 py-2">3(2-1)</td>
+              <td class="px-4 py-2">Macroeconomics I</td>
+              <td class="px-4 py-2">3(2-1)</td>
+            </tr>
+  
+            <!-- Year 3 -->
+            <tr class="bg-gray-100 font-semibold">
+              <td class="px-4 py-2" rowspan="6">ឆ្នាំទី ៣</td>
+              <td class="px-4 py-2">Microeconomics II</td>
+              <td class="px-4 py-2">3(2-1)</td>
+              <td class="px-4 py-2">Corporate Finance</td>
+              <td class="px-4 py-2">3(2-1)</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2">Operations Management</td>
+              <td class="px-4 py-2">3(2-1)</td>
+              <td class="px-4 py-2">Risk Management</td>
+              <td class="px-4 py-2">3(2-1)</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2">Macroeconomics II</td>
+              <td class="px-4 py-2">3(2-1)</td>
+              <td class="px-4 py-2">Research Methodology</td>
+              <td class="px-4 py-2">3(3-0)</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2">International Economics</td>
+              <td class="px-4 py-2">3(3-0)</td>
+              <td class="px-4 py-2">Financial Institution and Markets</td>
+              <td class="px-4 py-2">3(3-0)</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2">Financial Management</td>
+              <td class="px-4 py-2">3(2-1)</td>
+              <td class="px-4 py-2">Economic Policy and Planning</td>
+              <td class="px-4 py-2">3(2-1)</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2">Managerial Accounting</td>
+              <td class="px-4 py-2">3(2-1)</td>
+              <td class="px-4 py-2">Project Management</td>
+              <td class="px-4 py-2">3(2-1)</td>
+            </tr>
+  
+            <!-- Year 4 -->
+            <tr class="bg-gray-100 font-semibold">
+              <td class="px-4 py-2" rowspan="4">ឆ្នាំទី ៤</td>
+              <td class="px-4 py-2">Econometrics</td>
+              <td class="px-4 py-2">3(2-1)</td>
+              <td class="px-4 py-2">Investment Management</td>
+              <td class="px-4 py-2">3(2-1)</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2">Accounting for Bank</td>
+              <td class="px-4 py-2">3(2-1)</td>
+              <td class="px-4 py-2">Financial Statement Analysis</td>
+              <td class="px-4 py-2">3(2-1)</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2">Public Finance</td>
+              <td class="px-4 py-2">3(2-1)</td>
+              <td class="px-4 py-2">Basic Auditing</td>
+              <td class="px-4 py-2">3(2-1)</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2">Bank Management</td>
+              <td class="px-4 py-2">3(2-1)</td>
+              <td class="px-4 py-2">International Finance</td>
+              <td class="px-4 py-2">3(2-1)</td>
+            </tr>
+          </tbody>
+          <tfoot class="bg-blue-100 font-semibold">
+            <tr>
+              <td colspan="4" class="px-4 py-2 text-right">សរុបចំនួនក្រេឌីត</td>
+              <td class="px-4 py-2">126</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+  </section>
+  <section class="px-4 py-8 bg-white">
+    <div class="max-w-7xl mx-auto space-y-12">
+      
+      <!-- Economic Development Program -->
+      <div>
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">៧.២ កម្មវិជ្ជាសិក្សាថ្នាក់បរិញ្ញាបត្រអភិវឌ្ឍន៍សេដ្ឋកិច្ច</h2>
+        <p class="text-gray-700 leading-relaxed mb-6">
+          ការជ្រើសរើសយកជំនាញ អភិវឌ្ឍន៍សេដ្ឋកិច្ច ជាវិទ្យាសាស្ដ្រសង្គម... 
+          (អត្ថបទពេញ៖ ការសិក្សាពីបរិបទនៃសង្គមពាក់ព័ន្ធនឹងសកម្មភាពផលិត...)
+        </p>
+        <div class="overflow-x-auto">
+          <table class="table-auto w-full text-left border border-gray-300 text-sm">
+            <thead>
+              <tr class="bg-gray-100">
+                <th class="border px-4 py-2">ឆ្នាំសិក្សា</th>
+                <th class="border px-4 py-2">ឆមាសទី១</th>
+                <th class="border px-4 py-2">ឆមាសទី២</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border px-4 py-2">ឆ្នាំទី១</td>
+                <td class="border px-4 py-2">
+                  Philosophy (3) <br>
+                  Computer Literacy (3) <br>
+                  English for Finance & Accounting I (3) <br>
+                  History of Economic Thoughts (3) <br>
+                  Introduction to Business (3)
+                </td>
+                <td class="border px-4 py-2">
+                  Public Administration (3) <br>
+                  Maths for Business (3) <br>
+                  English for Finance & Accounting II (3) <br>
+                  Principles of Accounting (3) <br>
+                  Principles of Management (3)
+                </td>
+              </tr>
+              <tr>
+                <td class="border px-4 py-2">ឆ្នាំទី២</td>
+                <td class="border px-4 py-2">
+                  English for Finance & Accounting III (3) <br>
+                  Microeconomics I (3) <br>
+                  Economics (3) <br>
+                  Labor Economics (3) <br>
+                  Management Science (3)
+                </td>
+                <td class="border px-4 py-2">
+                  Money and Banking (3) <br>
+                  Principles of Marketing (3) <br>
+                  Business Statistics (3) <br>
+                  Business Law (3) <br>
+                  Taxation (3)
+                </td>
+              </tr>
+              <tr>
+                <td class="border px-4 py-2">ឆ្នាំទី៣</td>
+                <td class="border px-4 py-2">
+                  Microeconomics II (3) <br>
+                  Economic Development (3) <br>
+                  Resource Economics (3) <br>
+                  Risk Management (3) <br>
+                  Macroeconomics II (3)
+                </td>
+                <td class="border px-4 py-2">
+                  Research Methodology (3) <br>
+                  International Economics (3) <br>
+                  Financial Institution and Markets (3) <br>
+                  Financial Management (3) <br>
+                  Economic Policy and Planning (3)
+                </td>
+              </tr>
+              <tr>
+                <td class="border px-4 py-2">ឆ្នាំទី៤</td>
+                <td class="border px-4 py-2">
+                  Econometrics (3) <br>
+                  Cambodian Economy (3) <br>
+                  Public Finance (3) <br>
+                  ASEAN+WTO (3) <br>
+                  Monetary Economics (3)
+                </td>
+                <td class="border px-4 py-2">
+                  E-Commerce (3) <br>
+                  Asian Economy (3) <br>
+                  Agricultural Economics (3)
+                </td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr class="bg-gray-100">
+                <td colspan="3" class="border px-4 py-2 text-right font-semibold">សរុបចំនួនក្រេឌីត៖ 126</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+  
+  <section class="px-4 py-8 bg-white">
+    <div class="max-w-7xl mx-auto space-y-12">
+      
+      <!-- Development Economics Program -->
+      <div>
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">៧.២ កម្មវិធីសិក្សាថ្នាក់បរិញ្ញាបត្រអភិវឌ្ឍន៍សេដ្ឋកិច្ច</h2>
+        <p class="text-gray-700 leading-relaxed mb-6">
+          ការជ្រើសរើសយកជំនាញ អភិវឌ្ឍន៍សេដ្ឋកិច្ច ជាវិទ្យាសាស្ដ្រសង្គម... 
+          (អត្ថបទពេញ៖ យល់ដឹងពីដំណើរការ​គ្រប់គ្រងការ​ផលិត ចែកចាយ និងការប្រើប្រាស់...)
+        </p>
+        <div class="overflow-x-auto">
+          <table class="table-auto w-full text-left border border-gray-300 text-sm">
+            <thead>
+              <tr class="bg-gray-100">
+                <th class="border px-4 py-2">ឆ្នាំសិក្សា</th>
+                <th class="border px-4 py-2">ឆមាសទី១</th>
+                <th class="border px-4 py-2">ឆមាសទី២</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border px-4 py-2">ឆ្នាំទី១</td>
+                <td class="border px-4 py-2">
+                  Philosophy (3) <br>
+                  Computer Literacy (3) <br>
+                  English for Finance I (3) <br>
+                  History of Economic Thoughts (3) <br>
+                  Introduction to Business (3)
+                </td>
+                <td class="border px-4 py-2">
+                  Public Administration (3) <br>
+                  Maths for Business (3) <br>
+                  English for Finance II (3) <br>
+                  Principles of Accounting (3) <br>
+                  Principles of Management (3)
+                </td>
+              </tr>
+              <!-- Continue rows for years 2, 3, 4 similarly -->
+            </tbody>
+            <tfoot>
+              <tr class="bg-gray-100">
+                <td colspan="3" class="border px-4 py-2 text-right font-semibold">សរុបចំនួនក្រេឌីត៖ 126</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+  
+      <!-- Law Program -->
+      <div>
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">៧.៣ កម្មវិធីសិក្សាថ្នាក់បរិញ្ញាបត្រច្បាប់</h2>
+        <p class="text-gray-700 leading-relaxed mb-6">
+          ជំនាញ ច្បាប់ ត្រូវបានរៀបចំឡើងសម្រាប់និស្សិតជំនាញនីតិសាស្ដ្រ... 
+          (អត្ថបទពេញ៖ ទស្សនៈ គោលការណ៍ និងបទប្បញ្ញត្តិ​របស់ច្បាប់...)
+        </p>
+        <div class="overflow-x-auto">
+          <table class="table-auto w-full text-left border border-gray-300 text-sm">
+            <thead>
+              <tr class="bg-gray-100">
+                <th class="border px-4 py-2">ឆ្នាំសិក្សា</th>
+                <th class="border px-4 py-2">ឆមាសទី១</th>
+                <th class="border px-4 py-2">ឆមាសទី២</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border px-4 py-2">ឆ្នាំទី១</td>
+                <td class="border px-4 py-2">
+                  Philosophy (3) <br>
+                  Computer Literacy (3) <br>
+                  English for Law I (3) <br>
+                  Introduction to Cambodian Legal System (3) <br>
+                  History of Khmer Institution (3)
+                </td>
+                <td class="border px-4 py-2">
+                  Public Administration (3) <br>
+                  Basic Math & Statistics (3) <br>
+                  English for Law II (3) <br>
+                  Introduction to Law (3) <br>
+                  History of Political Theories (3)
+                </td>
+              </tr>
+              <!-- Continue rows for years 2, 3, 4 similarly -->
+            </tbody>
+            <tfoot>
+              <tr class="bg-gray-100">
+                <td colspan="3" class="border px-4 py-2 text-right font-semibold">សរុបចំនួនក្រេឌីត៖ 126</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+  <section class="px-4 py-8 bg-white">
+    <div class="max-w-7xl mx-auto space-y-12">
+      
+      <!-- Public Administration Program -->
+      <div>
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">៧.៤ កម្មវិធីសិក្សាថ្នាក់បរិញ្ញាបត្ររដ្ឋបាលសាធារណៈ</h2>
+        <p class="text-gray-700 leading-relaxed mb-6">
+          ជំនាញ រដ្ឋបាលសាធារណៈ ផ្តល់នូវចំណេះដឹងមូលដ្ឋាន... 
+          (អត្ថបទពេញ៖ វិស័យច្បាប់ និងរដ្ឋបាលសាធារណៈ ទាក់ទងនឹងស្ថាប័ន...)
+        </p>
+        <div class="overflow-x-auto">
+          <table class="table-auto w-full text-left border border-gray-300 text-sm">
+            <thead>
+              <tr class="bg-gray-100">
+                <th class="border px-4 py-2">ឆ្នាំសិក្សា</th>
+                <th class="border px-4 py-2">ឆមាសទី១</th>
+                <th class="border px-4 py-2">ឆមាសទី២</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border px-4 py-2">ឆ្នាំទី១</td>
+                <td class="border px-4 py-2">
+                  Philosophy (3) <br>
+                  Computer Literacy (3) <br>
+                  English for Law I (3) <br>
+                  Introduction to Cambodian Legal System (3) <br>
+                  History of Khmer Institution (3)
+                </td>
+                <td class="border px-4 py-2">
+                  Public Administration (3) <br>
+                  Basic Math & Statistics (3) <br>
+                  English for Law II (3) <br>
+                  Introduction to Law (3) <br>
+                  History of Political Theories (3)
+                </td>
+              </tr>
+              <tr>
+                <td class="border px-4 py-2">ឆ្នាំទី២</td>
+                <td class="border px-4 py-2">
+                  English for Law III (3) <br>
+                  International Relations (3) <br>
+                  Civil Law I (3) <br>
+                  Special Criminal Law (3) <br>
+                  General Criminal Law (3)
+                </td>
+                <td class="border px-4 py-2">
+                  Civil Law II (3) <br>
+                  Constitutional Law I (3) <br>
+                  Public International Law (3) <br>
+                  General Administrative Law (3) <br>
+                  Public Policy Analysis (3)
+                </td>
+              </tr>
+              <tr>
+                <td class="border px-4 py-2">ឆ្នាំទី៣</td>
+                <td class="border px-4 py-2">
+                  Taxation Law (3) <br>
+                  Administrative Conflict (3) <br>
+                  Administrative Procedure (3) <br>
+                  Procedures of Criminal Law (3) <br>
+                  Comparative Constitutional Law (3)
+                </td>
+                <td class="border px-4 py-2">
+                  Research Methodology (3) <br>
+                  Energy and Environmental Law (3) <br>
+                  ASEAN Legal Systems (3) <br>
+                  Special Contract Law (3) <br>
+                  Risks Management (3)
+                </td>
+              </tr>
+              <tr>
+                <td class="border px-4 py-2">ឆ្នាំទី៤</td>
+                <td class="border px-4 py-2">
+                  Human Rights (3) <br>
+                  Legal Methodology (3) <br>
+                  Conflict Resolution (3) <br>
+                  Civil Service Law (3) <br>
+                  Public Service Law (3)
+                </td>
+                <td class="border px-4 py-2">
+                  Public Financial Law (3) <br>
+                  Land and Urbanization Law (3) <br>
+                  Public Property Law (3)
+                </td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr class="bg-gray-100">
+                <td colspan="3" class="border px-4 py-2 text-right font-semibold">សរុបចំនួនក្រេឌីត៖ 126</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+  
+  
+  
+  
+  
+  
+  
+  
+
+<!-- Footer -->
+<section id="Contact" class="dark:text-red-500 mt-36">
+  <div class="relative bg-black text-white dark:bg-white dark:text-black">
+    <div class="container mx-auto px-4 py-10">
+      <div class="grid gap-10 md:grid-cols-3 pb-10">
+
+        <!-- About App -->
+        <div class="space-y-6">
+          <h4 class="text-lg font-bold">About PPIU</h4>
+          <p class="leading-relaxed">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil aliquid, itaque ab aspernatur earum consequuntur?
+          </p>
+          <div class="flex items-center gap-5">
+            <p>Follow Us</p>
+            <div class="flex gap-4 text-lg">
+              <i class="fa-brands fa-facebook-f cursor-pointer hover:text-blue-700"></i>
+              <i class="fa-brands fa-instagram cursor-pointer hover:text-blue-700"></i>
+              <i class="fa-brands fa-twitter cursor-pointer hover:text-blue-700"></i>
+              <i class="fa-brands fa-youtube cursor-pointer hover:text-blue-700"></i>
+              <i class="fa-brands fa-x-twitter cursor-pointer hover:text-blue-700"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Links & Help -->
+        <div class="flex flex-col gap-10 md:flex-row md:justify-around">
+          <!-- Quick Link -->
+          <div class="space-y-6">
+            <h4 class="text-lg font-bold">Quick Link</h4>
+            <ul class="space-y-3">
+              <li><a href="#" class="underline hover:no-underline hover:text-blue-700">Home</a></li>
+              <li><a href="#" class="underline hover:no-underline hover:text-blue-700">Admission</a></li>
+              <li><a href="#" class="underline hover:no-underline hover:text-blue-700">Academic</a></li>
+              <li><a href="#" class="underline hover:no-underline hover:text-blue-700">Alumni</a></li>
+              <li><a href="#" class="underline hover:no-underline hover:text-blue-700">About</a></li>
+              <li><a href="#" class="underline hover:no-underline hover:text-blue-700">Study materials</a></li>
+              <li><a href="#" class="underline hover:no-underline hover:text-blue-700"></a>Event</li>
+              <li><a href="#" class="underline hover:no-underline hover:text-blue-700">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Help -->
+          <div class="space-y-6">
+            <h4 class="text-lg font-bold">Help</h4>
+            <ul class="space-y-3">
+              <li><a href="#" class="underline hover:no-underline hover:text-orange-500">About Us</a></li>
+              <li><a href="#" class="underline hover:no-underline hover:text-orange-500">Partners</a></li>
+              <li><a href="#" class="underline hover:no-underline hover:text-orange-500">Career</a></li>
+              <li><a href="#" class="underline hover:no-underline hover:text-orange-500">Reviews</a></li>
+              <li><a href="#" class="underline hover:no-underline hover:text-orange-500">Terms & Conditions</a></li>
+              <li><a href="#" class="underline hover:no-underline hover:text-orange-500">Help</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="space-y-6">
+          <h4 class="text-lg font-bold">Contact Us</h4>
+          <p class="leading-relaxed">Feel free to reach out for any inquiries or support.</p>
+          <ul class="space-y-3 text-sm">
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-envelope text-blue-700"></i>
+              <a href="mailto:kompolit.help@gmail.com" class="hover:underline">kompol-IT.help@gmail.com</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-location-dot text-blue-700"></i>
+              <span>Building No. 36, Street No. 169, Sangkat Veal Vong, Khan 7 Makara, Phnom Penh, Cambodia</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-phone text-blue-700"></i>
+              <a href="tel:+85512345678" class="hover:underline">+855 12 345 678</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="pt-10 border-t border-gray-800 text-center">
+        <p>2025 &copy; Kompol-IT. All Rights Reserved.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
+<script src="/js/process.js"></script>
+<script src="/js/partners.js"></script>
+<script src="/js/exchange.js"></script>

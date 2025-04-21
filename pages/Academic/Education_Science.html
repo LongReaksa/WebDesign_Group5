@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 transition-colors duration-200">
+  <nav class="bg-white dark:bg-gray-800 shadow-md p-6">
+    <div class="max-w-8xl mx-auto px-4">
+      <div class="flex justify-between h-16">
+        <!-- Logo and primary nav section -->
+        <div class="flex">
+          <!-- Logo -->
+          <div class="flex-shrink-0 flex items-center">
+            <a href="#">
+              <img src="/images/logo_2.jpg" alt="" class="h-20 dark:text-blue-400">
+            </a>
+          </div>
+          
+          <!-- Primary Navigation (hidden on mobile) -->
+          <div class="hidden md:ml-6 lg:flex md:items-center md:space-x-4">
+            <!-- Admission Dropdown -->
+            <div class="relative group">
+              <a href="#admission" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400" onclick="goToPage(event, '/pages/admission.html')">
+                ADMISSION
+              </a>
+              <div class="absolute hidden group-hover:block bg-white dark:bg-gray-700 shadow-lg rounded-md mt-2 w-60 z-50">
+                <div class="py-2">
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600" onclick="goToPage(event, '/pages/associate.html')">
+                    ASSOCIATE
+                  </a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600" onclick="goToPage(event, '/pages/master.html')">
+                    MASTER
+                  </a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600" onclick="goToPage(event, '/pages/bachelor.html')">
+                    BACHELOR
+                  </a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600" onclick="goToPage(event, '/pages/doctoral.html')">
+                    DOCTORAL
+                  </a>
+                </div>
+              </div>
+            </div>
+        
+            <!-- Faculty Dropdown -->
+            <div class="relative group">
+              <a href="#Academic" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">
+                ACADEMIC
+              </a>
+              <div class="absolute hidden group-hover:block bg-white dark:bg-gray-700 shadow-lg rounded-md mt-2 w-60 z-50">
+                <div class="py-2">
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Faculty of Science and technology
+                  </a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Faculty of Business and Tourism
+                  </a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Faculty of Law and Economics
+                  </a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Faculty of Education Science
+                  </a>
+                </div>
+              </div>
+            </div>
+        
+            <!-- Alumni Dropdown -->
+            <div class="relative group">
+              <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">
+                Alumni
+              </a>
+              <div class="absolute hidden group-hover:block bg-white dark:bg-gray-700 shadow-lg rounded-md mt-2 w-60 z-50">
+                <div class="py-2">
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Study tour abroad
+                  </a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Study tour in the country
+                  </a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Internship abroad
+                  </a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Internship in the country
+                  </a>
+                </div>
+              </div>
+            </div>
+        
+            <!-- Other Navigation Items (without dropdowns) -->
+            <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">About</a>
+            <!-- Alumni Dropdown -->
+            <div class="relative group">
+              <a href="#Study_materials" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">
+                Study materials
+              </a>
+              <div class="absolute hidden group-hover:block bg-white dark:bg-gray-700 shadow-lg rounded-md mt-2 w-60 z-50">
+                <div class="py-2">
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Library
+                  </a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Meeting room
+                  </a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Classroom
+                  </a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Music room
+                  </a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Restaurant
+                  </a>
+                </div>
+              </div>
+          </div>
+          <!-- Alumni Dropdown -->
+          <div class="relative group">
+            <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">
+              Event
+            </a>
+            <div class="absolute hidden group-hover:block bg-white dark:bg-gray-700 shadow-lg rounded-md mt-2 w-60 z-50">
+              <div class="py-2">
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                Scholarship
+                </a>
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                  Partners
+                </a>
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                  Student Loans
+                </a>
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                  Job Announcements
+                </a>
+              </div>
+            </div>
+          </div>
+            <a href="#Contact" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">Contact</a>
+          </div>
+        </div>
+        
+        <!-- Secondary Navigation (dark mode toggle, language selector, mobile menu button) -->
+        <div class="flex items-center">
+          <!-- Dark Mode Toggle -->
+          <button onclick="toggleDarkMode()" class="p-2 rounded-md text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 focus:outline-none">
+            <!-- Sun icon (visible in dark mode) -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="hidden dark:block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
+            <!-- Moon icon (visible in light mode) -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="block dark:hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            </svg>
+          </button>
+          
+          <!-- Language Selector -->
+          <div class="ml-3 relative">
+            <div>
+              <button type="button" class="flex items-center text-sm text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 focus:outline-none" id="language-menu-button" aria-expanded="false" aria-haspopup="true" onclick="document.getElementById('language-dropdown').classList.toggle('hidden')">
+                <span class="sr-only">Open language menu</span>
+                <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+                </svg>
+                <span class="ml-1">EN</span>
+                <svg class="ml-1 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+              </button>
+            </div>
+            
+            <!-- Dropdown -->
+            <div id="language-dropdown" class="hidden origin-top-right absolute right-0 mt-2 w-40 rounded-md shadow-lg bg-white dark:bg-gray-800 ring-1 ring-black ring-opacity-5 focus:outline-none z-10" role="menu" aria-orientation="vertical" aria-labelledby="language-menu-button" tabindex="-1">
+              <div class="py-1" role="none">
+                <a href="#" onclick="changeLanguage('en'); document.getElementById('language-dropdown').classList.add('hidden')" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700" role="menuitem" tabindex="-1">English</a>
+                <a href="#" onclick="changeLanguage('fr'); document.getElementById('language-dropdown').classList.add('hidden')" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700" role="menuitem" tabindex="-1">Khmer</a>
+                <a href="#" onclick="changeLanguage('es'); document.getElementById('language-dropdown').classList.add('hidden')" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700" role="menuitem" tabindex="-1">Brazil</a>
+                <a href="#" onclick="changeLanguage('de'); document.getElementById('language-dropdown').classList.add('hidden')" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700" role="menuitem" tabindex="-1">Japan</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Mobile menu button -->
+          <div class="ml-4 flex items-center lg:hidden">
+            <button type="button" class="bg-white dark:bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" aria-controls="mobile-menu" aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div class="hidden lg:hidden" id="mobile-menu">
+      <div class="px-2 pt-2 pb-3 space-y-1 mt-10 bg-white dark:bg-gray-800">
+        <!-- Admission Dropdown -->
+        <div class="relative group">
+          <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">
+            ADMISSION
+          </a>
+          <div class="absolute hidden group-hover:block bg-white dark:bg-gray-700 shadow-lg rounded-md mt-2 w-60 z-50">
+            <div class="py-2">
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                ASSOCIATE
+              </a>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                MASTER
+              </a>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                BACHELOR
+              </a>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                DOCTORAL
+              </a>
+            </div>
+          </div>
+        </div>
+            <!-- Faculty Dropdown -->
+            <div class="relative group">
+              <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">
+                ACADEMIC
+              </a>
+              <div class="absolute hidden group-hover:block bg-white dark:bg-gray-700 shadow-lg rounded-md mt-2 w-60 z-50">
+                <div class="py-2">
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Faculty of Science and technology
+                  </a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Faculty of Business and Tourism
+                  </a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Faculty of Law and Economics
+                  </a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Faculty of Education Science
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Alumni Dropdown -->
+            <div class="relative group">
+              <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">
+                Alumni
+              </a>
+              <div class="absolute hidden group-hover:block bg-white dark:bg-gray-700 shadow-lg rounded-md mt-2 w-60 z-50">
+                <div class="py-2">
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Study tour abroad
+                  </a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Study tour in the country
+                  </a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Internship abroad
+                  </a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                    Internship in the country
+                  </a>
+                </div>
+              </div>
+            </div>
+        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">About</a>
+        <!-- Alumni Dropdown -->
+        <div class="relative group">
+          <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">
+            Study materials
+          </a>
+          <div class="absolute hidden group-hover:block bg-white dark:bg-gray-700 shadow-lg rounded-md mt-2 w-60 z-50">
+            <div class="py-2">
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                Library
+              </a>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                Meeting room
+              </a>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                Classroom
+              </a>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                Music room
+              </a>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                Restaurant
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Alumni Dropdown -->
+        <div class="relative group">
+          <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">
+            Event
+          </a>
+          <div class="absolute hidden group-hover:block bg-white dark:bg-gray-700 shadow-lg rounded-md mt-2 w-60 z-50">
+            <div class="py-2">
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+              Scholarship
+              </a>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                Partners
+              </a>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                Student Loans
+              </a>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+                Job Announcements
+              </a>
+            </div>
+          </div>
+        </div>
+          <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Contact</a>
+        </div>
+      </div>
+  </nav>
+
+  <section class="px-4 py-8 bg-white">
+    <div class="max-w-7xl mx-auto space-y-12">
+  
+      <!-- Program Overview -->
+      <div>
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Overall Program Aim</h2>
+        <p class="text-gray-700 leading-relaxed mb-6">
+          The overall aim of the program is to develop students’ capacity in using English in all genres of competencies regionally and internationally. The graduates will have an in-depth understanding of all kinds of social affairs communicated in English within a wide range of political economy. Four macro-skills are polished in order to broaden language proficiency, fluency, and accuracy.
+        </p>
+  
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Program Mission</h2>
+        <p class="text-gray-700 leading-relaxed mb-6">
+          The program is ready to commence with quality and standard in accordance to National Qualifications Framework for Higher Education in 2015. Therefore, the university's mission is to nurture academic excellence as the country’s premier business-knowledge-enhanced place of learning, providing business know-how for graduates in all disciplines, and to stay ahead in shaping business leaders and knowledge experts of tomorrow in an international academic and research atmosphere.
+        </p>
+        <p class="text-gray-700 leading-relaxed mb-6">
+          In order to achieve the above goals, the program’s curriculum development is a must. It focuses on fostering critical and creative thinking and independent working skills so that students enter the professional world more fully equipped to respond to its needs with knowledge in both English language and business.
+        </p>
+  
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Quality and Staff Development</h2>
+        <p class="text-gray-700 leading-relaxed mb-6">
+          Quality concern is another portion that the university never takes for granted; after having a good curriculum, staff training focus is also crucial in order to maximize the English education quality. Staff members need to be constantly provided with in-service training—staffs who have been employed receive more training to advance their instruction ability.
+        </p>
+  
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Role of Department of Higher Education</h2>
+        <p class="text-gray-700 leading-relaxed mb-6">
+          In Cambodia, the Department of Higher Education (DHE) plays an important role in overseeing and maintaining the implementation of the curriculum. This institution conducts workshops and other meetings with specialists and relevant stakeholders to develop and cross-check the quality and implementation of the curriculum. The curriculum must meet the academic requirements of assisting students to learn and develop cognitively in an optimum way, while equipping students with the professional skills and knowledge necessary for success in highly competitive national and international environments.
+        </p>
+  
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">English in Business</h2>
+        <p class="text-gray-700 leading-relaxed mb-6">
+          English is the global language and is increasingly necessary in all areas of business, especially with the coming 2015 ASEAN Community where English will definitely become the means of communication. Like all nations, countries in the region are not immune to world economic trends, and have been affected by recent global economic crises.
+        </p>
+        <p class="text-gray-700 leading-relaxed mb-6">
+          For Bachelor Degree graduates, the job market is as competitive as ever, and this competition has been added to by a growth in the number of higher education institutions. Curricula must equip students with as many skills and competencies as possible if these students are to succeed in this very competitive environment.
+        </p>
+      </div>
+  
+    </div>
+  </section>
+  <section class="px-4 py-8 bg-white">
+    <div class="max-w-7xl mx-auto space-y-12">
+  
+      <!-- Associate Degree Program Overview -->
+      <div>
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">1. Associate Degree</h2>
+        
+        <h3 class="text-xl font-semibold text-gray-800 mb-4">Vision</h3>
+        <p class="text-gray-700 leading-relaxed mb-6">
+          The Associate Degree Program in English is designed for highly qualified associate diploma holders to meet workforce demand where English is tremendously used. Learners will acquire practical English language skills that can be applied effectively in various fields such as teaching, tourism, business, and financial sectors, among others. Moreover, this program develops personal confidence and competency in communication skills that require English. It provides not only the hard skills related to English use but also soft skills that enable learners to integrate into the business world and culture.
+        </p>
+  
+        <h3 class="text-xl font-semibold text-gray-800 mb-4">Goal</h3>
+        <p class="text-gray-700 leading-relaxed mb-6">
+          Our program aims to produce human resources that meet the current trend of the job market, where English is widely used. It also aims to equip the successful degree holders from this program to fit themselves into the regional competitive working environment, especially with the upcoming ASEAN community integration by 2015.
+        </p>
+  
+        <h3 class="text-xl font-semibold text-gray-800 mb-4">Mission</h3>
+        <p class="text-gray-700 leading-relaxed mb-6">
+          Our mission is to provide concrete and useful knowledge for learners in a very short time through an applicable mechanism:
+        </p>
+        <ul class="list-inside list-disc text-gray-700 mb-6">
+          <li>Enriching curriculum knowledge and practice to prepare learners for the real work environment.</li>
+          <li>Effective instructions for student activity orientation.</li>
+          <li>Highly qualified lecturers—both academically and pedagogically.</li>
+          <li>Sufficient time and content to ensure learners are effectively transmitted knowledge.</li>
+          <li>Cooperation with partnered companies to provide internship opportunities and prospective employment.</li>
+          <li>Exchange programs with partnered universities abroad to regionalize and globalize learners' knowledge.</li>
+        </ul>
+  
+      </div>
+  
+    </div>
+  </section>
+  <section class="px-4 py-8 bg-white">
+    <div class="max-w-7xl mx-auto space-y-12">
+  
+      <!-- Curriculum -->
+      <div>
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">2. Curriculum</h2>
+  
+        <div class="space-y-6">
+          <!-- Year 1-1 -->
+          <div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">Year 1-1</h3>
+            <table class="min-w-full table-auto border-collapse border border-gray-300">
+              <thead>
+                <tr>
+                  <th class="border border-gray-300 px-4 py-2 text-left">Code</th>
+                  <th class="border border-gray-300 px-4 py-2 text-left">Course Title</th>
+                  <th class="border border-gray-300 px-4 py-2 text-left">Level and Objectives</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="border border-gray-300 px-4 py-2">ENGA101</td>
+                  <td class="border border-gray-300 px-4 py-2">General English 1</td>
+                  <td class="border border-gray-300 px-4 py-2">Pre-intermediate levels; it channels up the English knowledge where students have previously learned.</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 px-4 py-2">ENGA102</td>
+                  <td class="border border-gray-300 px-4 py-2">Listening and Speaking Skills 1</td>
+                  <td class="border border-gray-300 px-4 py-2">Build up listening and speaking capacity by providing practical techniques.</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 px-4 py-2">ENGA103</td>
+                  <td class="border border-gray-300 px-4 py-2">Basic Writings</td>
+                  <td class="border border-gray-300 px-4 py-2">Provide the knowledge related to part of speech, clauses, punctuations, words in context that leads to the strong ability of writing.</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 px-4 py-2">ENGA104</td>
+                  <td class="border border-gray-300 px-4 py-2">Computer Literacy</td>
+                  <td class="border border-gray-300 px-4 py-2">Enable students with the ability of computing; it helps students proceed their academic document as well as proceed works in workplace.</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 px-4 py-2">ENGA105</td>
+                  <td class="border border-gray-300 px-4 py-2">Effective Reading Strategies</td>
+                  <td class="border border-gray-300 px-4 py-2">Provide techniques for effective reading plus chances to learn more vocabulary and context use appropriately.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+  
+          <!-- Year 1-2 -->
+          <div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">Year 1-2</h3>
+            <table class="min-w-full table-auto border-collapse border border-gray-300">
+              <thead>
+                <tr>
+                  <th class="border border-gray-300 px-4 py-2 text-left">Code</th>
+                  <th class="border border-gray-300 px-4 py-2 text-left">Course Title</th>
+                  <th class="border border-gray-300 px-4 py-2 text-left">Level and Objectives</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="border border-gray-300 px-4 py-2">ENGA106</td>
+                  <td class="border border-gray-300 px-4 py-2">General English 2</td>
+                  <td class="border border-gray-300 px-4 py-2">Continuation step of providing more English upgrading opportunities: tense system, vocabulary, social language, and other grammatical points.</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 px-4 py-2">ENGA107</td>
+                  <td class="border border-gray-300 px-4 py-2">Listening and Speaking Skills 2</td>
+                  <td class="border border-gray-300 px-4 py-2">The second step of building up listening and speaking capacity by providing practical techniques. Learners involve more with the real environment of English use and usage.</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 px-4 py-2">ENGA108</td>
+                  <td class="border border-gray-300 px-4 py-2">Paragraph Writing</td>
+                  <td class="border border-gray-300 px-4 py-2">The extension of writing development to paragraph writing: definition of paragraph, parts of paragraph, words using, and more practice.</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 px-4 py-2">ENGA109</td>
+                  <td class="border border-gray-300 px-4 py-2">Public Administration</td>
+                  <td class="border border-gray-300 px-4 py-2">This course offers office skills, letter writing, and administrative procedures.</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 px-4 py-2">ENGA110</td>
+                  <td class="border border-gray-300 px-4 py-2">Critical and Comprehensive Readings</td>
+                  <td class="border border-gray-300 px-4 py-2">Students deal with multi-topic genres that provide extensive reading into various texts such as politics, science, business, agriculture, and trade.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+  
+          <!-- Year 2-1 -->
+          <div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">Year 2-1</h3>
+            <table class="min-w-full table-auto border-collapse border border-gray-300">
+              <thead>
+                <tr>
+                  <th class="border border-gray-300 px-4 py-2 text-left">Code</th>
+                  <th class="border border-gray-300 px-4 py-2 text-left">Course Title</th>
+                  <th class="border border-gray-300 px-4 py-2 text-left">Level and Objectives</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="border border-gray-300 px-4 py-2">ENGA201</td>
+                  <td class="border border-gray-300 px-4 py-2">General English 3</td>
+                  <td class="border border-gray-300 px-4 py-2">The general English comprehension will be provided; more English upgrading opportunities: tense system, vocabulary, social language, and other grammatical points.</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 px-4 py-2">ENGA202</td>
+                  <td class="border border-gray-300 px-4 py-2">Business Concepts 1</td>
+                  <td class="border border-gray-300 px-4 py-2">Students extend their knowledge with business concepts that are really important to prepare students for effective business-related works.</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 px-4 py-2">ENGA203</td>
+                  <td class="border border-gray-300 px-4 py-2">Essay Writing</td>
+                  <td class="border border-gray-300 px-4 py-2">Students will practice writing essays.</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 px-4 py-2">ENGA204</td>
+                  <td class="border border-gray-300 px-4 py-2">Principles of Management</td>
+                  <td class="border border-gray-300 px-4 py-2">To provide students with management concepts (planning, organizing, leading, and controlling) with all management levels.</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 px-4 py-2">ENGA205</td>
+                  <td class="border border-gray-300 px-4 py-2">Situational Communications</td>
+                  <td class="border border-gray-300 px-4 py-2">An effective personal skill in communicating is instructed here; appropriate manner at a suitable time is significantly important while communicating.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+  
+          <!-- Year 2-2 -->
+          <div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">Year 2-2</h3>
+            <table class="min-w-full table-auto border-collapse border border-gray-300">
+              <thead>
+                <tr>
+                  <th class="border border-gray-300 px-4 py-2 text-left">Code</th>
+                  <th class="border border-gray-300 px-4 py-2 text-left">Course Title</th>
+                  <th class="border border-gray-300 px-4 py-2 text-left">Level and Objectives</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="border border-gray-300 px-4 py-2">ENGA206</td>
+                  <td class="border border-gray-300 px-4 py-2">General English 4</td>
+                  <td class="border border-gray-300 px-4 py-2">This final stage of providing general English is allocated here. Learners advance their English ability related to tense system and other grammatical points, social language, and formal and informal language.</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 px-4 py-2">ENGA207</td>
+                  <td class="border border-gray-300 px-4 py-2">Business Concepts 2</td>
+                  <td class="border border-gray-300 px-4 py-2">Students extend their knowledge with business concepts that are really important to prepare students for effective business-related works.</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 px-4 py-2">ENGA208</td>
+                  <td class="border border-gray-300 px-4 py-2">Business Writing</td>
+                  <td class="border border-gray-300 px-4 py-2">Students learn and practice writing proposals, memos, reports, CVs, etc.</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 px-4 py-2">ENGA209</td>
+                  <td class="border border-gray-300 px-4 py-2">Introduction to Teaching and Training Methodology</td>
+                  <td class="border border-gray-300 px-4 py-2">Equip students with teaching and training techniques; how to teach or train effectively.</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 px-4 py-2">ENGA210</td>
+                  <td class="border border-gray-300 px-4 py-2">Effective Workplace Communication</td>
+                  <td class="border border-gray-300 px-4 py-2">This course provides more knowledge related to values, attitudes, manner, general human relations, and other etiquettes; prospective office workers will lead their lives in the office with highly prestigious manners.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+  
+      </div>
+  
+    </div>
+  </section>
+  <section class="px-4 py-8 bg-white">
+    <div class="max-w-7xl mx-auto space-y-12">
+  
+      <!-- Bachelor Degree Overview -->
+      <div>
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">3. Bachelor Degree</h2>
+        <p class="text-gray-700 mb-4">
+          The Bachelor program in English is designed to meet workforce demand where English is tremendously used. The graduates from this program are expected to work in the fields of teaching, translating and interpreting, as well as those in tourism, hospitality, and business, particularly where English proficiency is required. 
+          In response to the need for capable human resources, Phnom Penh International University (PPIU), with its Faculty of Education Science, has established three English programs:
+        </p>
+        <ul class="list-disc pl-5 space-y-2 text-gray-700 mb-6">
+          <li><strong>English for Education</strong>: Focuses on Teaching English as a Foreign Language (TEFL).</li>
+          <li><strong>English for Business</strong>: Aims to provide English for work skills, offering vocationally focused courses for administrative and developmental roles.</li>
+          <li><strong>English for Specific Academic Purposes (ESAP)</strong>: A distinct program promoting English among students in other academic fields, provided to students who take business-related fields from Year I to Year II semester I.</li>
+        </ul>
+        <p class="text-gray-700 mb-4">
+          All students must complete the university's Foundation Year program, acquiring general knowledge and ethical principles necessary for further study. For students in the English for Education and English for Business programs, they will take the same courses throughout Years II and III before specializing in their area of English studies in Year IV.
+        </p>
+        <p class="text-gray-700 mb-4">
+          The English for Education program develops students' professional skills in TEFL at secondary and tertiary school levels. A practicum (teaching practice) and ongoing individual learning are key aspects of the course.
+        </p>
+        <p class="text-gray-700 mb-4">
+          The English for Business program enhances students' English knowledge and ability for employment in various administrative and developmental roles requiring high-level English skills. In Year IV, students specialize in subjects like Business Communications, Public Relations, International Business, Research Methodology, Translation Skills, and English for Business.
+        </p>
+      </div>
+  
+      <!-- Admission -->
+      <div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-4">Admission</h3>
+        <p class="text-gray-700 mb-4">
+          In order to enroll in the program, all students must:
+        </p>
+        <ul class="list-decimal pl-5 space-y-2 text-gray-700 mb-6">
+          <li>Hold a High School Certificate or a qualification deemed equivalent by the Ministry of Education, Youth and Sport (MoEYS). Alternatively, a B.A. or an associate degree in any field from a recognized university or institute.</li>
+          <li>Pass a 90-minute English entrance examination administered by the Faculty of Education Science, PPIU.</li>
+          <li>Fill out the formal application form, which is essential for registration and validation by the Ministry of Education, Youth and Sports.</li>
+        </ul>
+      </div>
+  
+      <!-- Assessment -->
+      <div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-4">Assessment and Examination</h3>
+        <p class="text-gray-700 mb-4">
+          Students' academic performance is assessed seriously each semester. A good score in one semester cannot compensate for a fair or poor score in another. Assessment is carried out in two ways:
+        </p>
+        <ul class="list-decimal pl-5 space-y-2 text-gray-700 mb-6">
+          <li><strong>Ongoing Assessment (55%)</strong> based on:
+            <ul class="list-inside space-y-2">
+              <li>Class attendance and participation (10%)</li>
+              <li>Homework, assignments, oral presentations (20%)</li>
+              <li>Mid-term test (25%)</li>
+            </ul>
+          </li>
+          <li><strong>Final Examination (45%)</strong></li>
+        </ul>
+        <p class="text-gray-700 mb-4">
+          The ongoing assessment score is announced at the end of the course before the final exam. Students will know how many marks or scores they have earned and how many more they need to achieve.
+        </p>
+        <p class="text-gray-700 mb-4">
+          Before announcing the final result, the management team and academic personnel cross-check the accuracy and validity of the results to ensure fairness.
+        </p>
+      </div>
+  
+    </div>
+  </section>
+  <section class="px-4 py-8 bg-white">
+    <div class="max-w-7xl mx-auto space-y-12">
+  
+      <!-- Promotion -->
+      <div>
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Promotion</h2>
+        <p class="text-gray-700 mb-4">
+          Students must fulfill all academic and attendance requirements to be promoted to the next level. In order to pass a subject, students must achieve a score of <strong>at least 60%</strong>.
+        </p>
+      </div>
+  
+      <!-- Curriculum -->
+      <div>
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Curriculum</h2>
+  
+        <!-- Year 1 -->
+        <div class="mb-8">
+          <h3 class="text-xl font-semibold text-gray-800 mb-4">Year 1</h3>
+          <table class="min-w-full table-auto border-collapse">
+            <thead>
+              <tr>
+                <th class="px-4 py-2 text-left border border-gray-300">Code</th>
+                <th class="px-4 py-2 text-left border border-gray-300">Course Title</th>
+                <th class="px-4 py-2 text-left border border-gray-300">Description</th>
+              </tr>
+            </thead>
+            <tbody class="text-gray-700">
+              <tr>
+                <td class="px-4 py-2 border border-gray-300">ENG101</td>
+                <td class="px-4 py-2 border border-gray-300">Core English I</td>
+                <td class="px-4 py-2 border border-gray-300">
+                  This subject focuses on improving students' macro skills: reading, listening, writing, and speaking, along with grammar knowledge, such as the tense system, everyday English, gerunds, question forms, and discourse analysis.
+                </td>
+              </tr>
+              <tr>
+                <td class="px-4 py-2 border border-gray-300">ENG102</td>
+                <td class="px-4 py-2 border border-gray-300">Academic Writing I</td>
+                <td class="px-4 py-2 border border-gray-300">
+                  This subject equips students with structure of phrases, sentences, paragraphs, and essay development, focusing on academic writing skills.
+                </td>
+              </tr>
+              <tr>
+                <td class="px-4 py-2 border border-gray-300">FOY101</td>
+                <td class="px-4 py-2 border border-gray-300">Philosophy</td>
+                <td class="px-4 py-2 border border-gray-300">-</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-2 border border-gray-300">CSE101</td>
+                <td class="px-4 py-2 border border-gray-300">Computer Literacy</td>
+                <td class="px-4 py-2 border border-gray-300">
+                  This course provides students with practical skills in using computers, including Microsoft Word, Excel, Internet, and email.
+                </td>
+              </tr>
+              <tr>
+                <td class="px-4 py-2 border border-gray-300">ECO101</td>
+                <td class="px-4 py-2 border border-gray-300">History of Economic Thoughts</td>
+                <td class="px-4 py-2 border border-gray-300">-</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+  
+        <!-- Year 2 -->
+        <div class="mb-8">
+          <h3 class="text-xl font-semibold text-gray-800 mb-4">Year 2</h3>
+          <table class="min-w-full table-auto border-collapse">
+            <thead>
+              <tr>
+                <th class="px-4 py-2 text-left border border-gray-300">Code</th>
+                <th class="px-4 py-2 text-left border border-gray-300">Course Title</th>
+                <th class="px-4 py-2 text-left border border-gray-300">Description</th>
+              </tr>
+            </thead>
+            <tbody class="text-gray-700">
+              <tr>
+                <td class="px-4 py-2 border border-gray-300">ENG201</td>
+                <td class="px-4 py-2 border border-gray-300">Core English III</td>
+                <td class="px-4 py-2 border border-gray-300">
+                  This course equips students with upper-intermediate English proficiency, emphasizing lexical and grammatical aspects of language for fluent and accurate communication.
+                </td>
+              </tr>
+              <tr>
+                <td class="px-4 py-2 border border-gray-300">ENG202</td>
+                <td class="px-4 py-2 border border-gray-300">Academic Writing III</td>
+                <td class="px-4 py-2 border border-gray-300">
+                  This course provides students with practice in writing various types of paragraphs, including definition, process analysis, and narrative paragraphs.
+                </td>
+              </tr>
+              <tr>
+                <td class="px-4 py-2 border border-gray-300">ENG203</td>
+                <td class="px-4 py-2 border border-gray-300">Literature Studies II</td>
+                <td class="px-4 py-2 border border-gray-300">
+                  This subject helps students develop critical thinking skills through analysis of literary works, focusing on various literary genres and linguistic features.
+                </td>
+              </tr>
+              <tr>
+                <td class="px-4 py-2 border border-gray-300">ENG204</td>
+                <td class="px-4 py-2 border border-gray-300">Cultural Studies II</td>
+                <td class="px-4 py-2 border border-gray-300">
+                  This course broadens students' knowledge of global issues such as globalization, international organizations, and human rights.
+                </td>
+              </tr>
+              <tr>
+                <td class="px-4 py-2 border border-gray-300">ENG205</td>
+                <td class="px-4 py-2 border border-gray-300">Communication Skills I</td>
+                <td class="px-4 py-2 border border-gray-300">
+                  This course improves students' oral and written communication skills, focusing on public speaking, debating, and effective workplace communication.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+  
+        <!-- Year 3 -->
+        <div class="mb-8">
+          <h3 class="text-xl font-semibold text-gray-800 mb-4">Year 3</h3>
+          <table class="min-w-full table-auto border-collapse">
+            <thead>
+              <tr>
+                <th class="px-4 py-2 text-left border border-gray-300">Code</th>
+                <th class="px-4 py-2 text-left border border-gray-300">Course Title</th>
+                <th class="px-4 py-2 text-left border border-gray-300">Description</th>
+              </tr>
+            </thead>
+            <tbody class="text-gray-700">
+              <tr>
+                <td class="px-4 py-2 border border-gray-300">ENG301</td>
+                <td class="px-4 py-2 border border-gray-300">Core English V</td>
+                <td class="px-4 py-2 border border-gray-300">
+                  This course equips students with advanced English proficiency, with emphasis on lexical and grammatical aspects of English for advanced communication.
+                </td>
+              </tr>
+              <tr>
+                <td class="px-4 py-2 border border-gray-300">ENG302</td>
+                <td class="px-4 py-2 border border-gray-300">Academic Writing V</td>
+                <td class="px-4 py-2 border border-gray-300">
+                  This advanced course focuses on writing different types of essays, including narrative, comparison, and argumentative essays.
+                </td>
+              </tr>
+              <tr>
+                <td class="px-4 py-2 border border-gray-300">ENG303</td>
+                <td class="px-4 py-2 border border-gray-300">Literature Studies IV</td>
+                <td class="px-4 py-2 border border-gray-300">
+                  This course helps students analyze literature critically, with a focus on feminist and Marxist theories.
+                </td>
+              </tr>
+              <tr>
+                <td class="px-4 py-2 border border-gray-300">ENG304</td>
+                <td class="px-4 py-2 border border-gray-300">Cultural Studies IV</td>
+                <td class="px-4 py-2 border border-gray-300">
+                  This course broadens students' understanding of cultural contexts and the value of different lifestyles in society.
+                </td>
+              </tr>
+              <tr>
+                <td class="px-4 py-2 border border-gray-300">ENG305</td>
+                <td class="px-4 py-2 border border-gray-300">Communication Skills III</td>
+                <td class="px-4 py-2 border border-gray-300">
+                  This course focuses on listening, speaking, critical thinking, pronunciation, vocabulary, and grammar.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+  
+        <!-- Year 4 -->
+        <div class="mb-8">
+          <h3 class="text-xl font-semibold text-gray-800 mb-4">Year 4</h3>
+          <table class="min-w-full table-auto border-collapse">
+            <thead>
+              <tr>
+                <th class="px-4 py-2 text-left border border-gray-300">Code</th>
+                <th class="px-4 py-2 text-left border border-gray-300">Course Title</th>
+                <th class="px-4 py-2 text-left border border-gray-300">Description</th>
+              </tr>
+            </thead>
+            <tbody class="text-gray-700">
+              <tr>
+                <td class="px-4 py-2 border border-gray-300">ENG401</td>
+                <td class="px-4 py-2 border border-gray-300">Core English VII</td>
+                <td class="px-4 py-2 border border-gray-300">
+                  This advanced course focuses on the full comprehension of sophisticated academic texts, enhancing reading, writing, listening, and speaking skills.
+                </td>
+              </tr>
+              <tr>
+                <td class="px-4 py-2 border border-gray-300">ENG402</td>
+                <td class="px-4 py-2 border border-gray-300">Academic Writing VII</td>
+                <td class="px-4 py-2 border border-gray-300">
+                  This course is for students to develop advanced writing skills, including academic articles, research papers, and essays.
+                </td>
+              </tr>
+              <tr>
+                <td class="px-4 py-2 border border-gray-300">ENG403</td>
+                <td class="px-4 py-2 border border-gray-300">Literature Studies VI</td>
+                <td class="px-4 py-2 border border-gray-300">
+                  The focus is on integrating academic research and critical writing methods to analyze English literature.
+                </td>
+              </tr>
+              <tr>
+                <td class="px-4 py-2 border border-gray-300">ENG404</td>
+                <td class="px-4 py-2 border border-gray-300">Cultural Studies VI</td>
+                <td class="px-4 py-2 border border-gray-300">
+                  This course explores how global culture and identity shape interpersonal communication in the global context.
+                </td>
+              </tr>
+              <tr>
+                <td class="px-4 py-2 border border-gray-300">ENG405</td>
+                <td class="px-4 py-2 border border-gray-300">Communication Skills V</td>
+                <td class="px-4 py-2 border border-gray-300">
+                  A culmination of advanced communication techniques focusing on professional situations and real-world dialogues.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
+  
+  
+  
+  
+
+  
+    
+  
+
+<!-- Footer -->
+<section id="Contact" class="dark:text-red-500 mt-36">
+  <div class="relative bg-black text-white dark:bg-white dark:text-black">
+    <div class="container mx-auto px-4 py-10">
+      <div class="grid gap-10 md:grid-cols-3 pb-10">
+
+        <!-- About App -->
+        <div class="space-y-6">
+          <h4 class="text-lg font-bold">About PPIU</h4>
+          <p class="leading-relaxed">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil aliquid, itaque ab aspernatur earum consequuntur?
+          </p>
+          <div class="flex items-center gap-5">
+            <p>Follow Us</p>
+            <div class="flex gap-4 text-lg">
+              <i class="fa-brands fa-facebook-f cursor-pointer hover:text-blue-700"></i>
+              <i class="fa-brands fa-instagram cursor-pointer hover:text-blue-700"></i>
+              <i class="fa-brands fa-twitter cursor-pointer hover:text-blue-700"></i>
+              <i class="fa-brands fa-youtube cursor-pointer hover:text-blue-700"></i>
+              <i class="fa-brands fa-x-twitter cursor-pointer hover:text-blue-700"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Links & Help -->
+        <div class="flex flex-col gap-10 md:flex-row md:justify-around">
+          <!-- Quick Link -->
+          <div class="space-y-6">
+            <h4 class="text-lg font-bold">Quick Link</h4>
+            <ul class="space-y-3">
+              <li><a href="#" class="underline hover:no-underline hover:text-blue-700">Home</a></li>
+              <li><a href="#" class="underline hover:no-underline hover:text-blue-700">Admission</a></li>
+              <li><a href="#" class="underline hover:no-underline hover:text-blue-700">Academic</a></li>
+              <li><a href="#" class="underline hover:no-underline hover:text-blue-700">Alumni</a></li>
+              <li><a href="#" class="underline hover:no-underline hover:text-blue-700">About</a></li>
+              <li><a href="#" class="underline hover:no-underline hover:text-blue-700">Study materials</a></li>
+              <li><a href="#" class="underline hover:no-underline hover:text-blue-700"></a>Event</li>
+              <li><a href="#" class="underline hover:no-underline hover:text-blue-700">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Help -->
+          <div class="space-y-6">
+            <h4 class="text-lg font-bold">Help</h4>
+            <ul class="space-y-3">
+              <li><a href="#" class="underline hover:no-underline hover:text-orange-500">About Us</a></li>
+              <li><a href="#" class="underline hover:no-underline hover:text-orange-500">Partners</a></li>
+              <li><a href="#" class="underline hover:no-underline hover:text-orange-500">Career</a></li>
+              <li><a href="#" class="underline hover:no-underline hover:text-orange-500">Reviews</a></li>
+              <li><a href="#" class="underline hover:no-underline hover:text-orange-500">Terms & Conditions</a></li>
+              <li><a href="#" class="underline hover:no-underline hover:text-orange-500">Help</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="space-y-6">
+          <h4 class="text-lg font-bold">Contact Us</h4>
+          <p class="leading-relaxed">Feel free to reach out for any inquiries or support.</p>
+          <ul class="space-y-3 text-sm">
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-envelope text-blue-700"></i>
+              <a href="mailto:kompolit.help@gmail.com" class="hover:underline">kompol-IT.help@gmail.com</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-location-dot text-blue-700"></i>
+              <span>Building No. 36, Street No. 169, Sangkat Veal Vong, Khan 7 Makara, Phnom Penh, Cambodia</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-phone text-blue-700"></i>
+              <a href="tel:+85512345678" class="hover:underline">+855 12 345 678</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="pt-10 border-t border-gray-800 text-center">
+        <p>2025 &copy; Kompol-IT. All Rights Reserved.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
+<script src="/js/process.js"></script>
+<script src="/js/partners.js"></script>
+<script src="/js/exchange.js"></script>

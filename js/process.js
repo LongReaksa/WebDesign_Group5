@@ -92,6 +92,9 @@ document.addEventListener('DOMContentLoaded', function() {
         startAutoScroll();
     });
 
+    // link pages
 
-
-    
+    function goToPage(event, url) {
+      event.preventDefault(); // Prevent the default anchor behavior
+      window.location.href = url;
+    }
