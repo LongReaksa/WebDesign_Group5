@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Responsive Navbar</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="/build/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <script src="https://cdn.tailwindcss.com"></script>
@@ -327,189 +328,44 @@
       </div>
   </nav>
   
-  <div class="max-w-6xl mx-auto px-4 py-12">
-    <h2 class="text-3xl font-bold text-center text-gray-800 mb-10">Study Tour in the Country</h2>
+
   
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      
-      <!-- Card 1 -->
-      <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-tour>
-        <img src="https://source.unsplash.com/featured/?university,temple" alt="Local Tour 1" class="w-full h-48 object-cover">
-        <div class="p-5">
-          <h3 class="text-xl font-semibold text-gray-800 mb-2">Historical Sites Tour</h3>
-          <p class="text-gray-600 text-sm mb-3 line-clamp-3">
-            Discover Cambodia’s rich cultural heritage through guided visits to temples and museums.
-          </p>
-          <button class="text-sm text-blue-600 font-medium hover:underline" onclick="toggleDetail(this)">Read More</button>
-          <div class="mt-4 hidden">
-            <p class="text-sm text-gray-600">
-              This tour includes educational trips to Angkor Wat, National Museum, and local cultural workshops. Learn about ancient civilizations and architecture.
-            </p>
+  
+
+  
+  
+  
+    <!-- Study Materials -->
+    <div id="Study_materials" class="max-w-6xl mx-auto py-12 px-4">
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-10">Facility Section Program</h1>
+    
+        <!-- Navigation Buttons -->
+        <div class="flex overflow-x-auto space-x-4 pb-4 mb-6" id="nav-buttons"></div>
+    
+        <!-- Main Content -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden md:flex" id="main-content">
+          <!-- Image -->
+          <div class="md:w-1/2 h-64 md:h-auto bg-gray-300 flex items-center justify-center">
+            <img id="section-img" src="" alt="" class="object-cover w-full h-full"/>
+          </div>
+          <!-- Text -->
+          <div class="p-8 md:w-1/2">
+            <div class="uppercase tracking-wide text-sm text-blue-600 font-semibold">Section Program</div>
+            <h2 class="mt-2 text-2xl font-bold text-gray-900" id="section-title"></h2>
+            <p class="mt-4 text-gray-600" id="section-desc"></p>
+            <div class="mt-6">
+              <h3 class="text-lg font-semibold text-gray-900">Details</h3>
+              <p class="mt-2 text-gray-600" id="section-detail"></p>
+            </div>
+            <div class="mt-8">
+              <button class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition">Learn More</button>
+              <button class="ml-4 bg-white hover:bg-gray-50 text-blue-600 border border-blue-600 font-medium py-2 px-4 rounded-md transition">Book Now</button>
+            </div>
           </div>
         </div>
       </div>
-  
-      <!-- Card 2 -->
-      <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-tour>
-        <img src="https://source.unsplash.com/featured/?farm,students" alt="Local Tour 2" class="w-full h-48 object-cover">
-        <div class="p-5">
-          <h3 class="text-xl font-semibold text-gray-800 mb-2">Agriculture Field Trip</h3>
-          <p class="text-gray-600 text-sm mb-3 line-clamp-3">
-            Learn about local farming techniques, sustainability, and agro-business through real field experience.
-          </p>
-          <button class="text-sm text-blue-600 font-medium hover:underline" onclick="toggleDetail(this)">Read More</button>
-          <div class="mt-4 hidden">
-            <p class="text-sm text-gray-600">
-              Visit rice fields, meet local farmers, and understand agricultural innovation in Cambodia. Ideal for environmental science and economics students.
-            </p>
-          </div>
-        </div>
-      </div>
-  
-      <!-- Card 3 -->
-      <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-tour>
-        <img src="https://source.unsplash.com/featured/?school,students" alt="Local Tour 3" class="w-full h-48 object-cover">
-        <div class="p-5">
-          <h3 class="text-xl font-semibold text-gray-800 mb-2">University Campus Tour</h3>
-          <p class="text-gray-600 text-sm mb-3 line-clamp-3">
-            Explore top universities in Phnom Penh to learn about academic life, programs, and future careers.
-          </p>
-          <button class="text-sm text-blue-600 font-medium hover:underline" onclick="toggleDetail(this)">Read More</button>
-          <div class="mt-4 hidden">
-            <p class="text-sm text-gray-600">
-              Includes guided campus tours, mock lectures, career talks, and student networking sessions with local undergraduates.
-            </p>
-          </div>
-        </div>
-      </div>
-            <!-- Card 3 -->
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-tour>
-                <img src="https://source.unsplash.com/featured/?school,students" alt="Local Tour 3" class="w-full h-48 object-cover">
-                <div class="p-5">
-                  <h3 class="text-xl font-semibold text-gray-800 mb-2">University Campus Tour</h3>
-                  <p class="text-gray-600 text-sm mb-3 line-clamp-3">
-                    Explore top universities in Phnom Penh to learn about academic life, programs, and future careers.
-                  </p>
-                  <button class="text-sm text-blue-600 font-medium hover:underline" onclick="toggleDetail(this)">Read More</button>
-                  <div class="mt-4 hidden">
-                    <p class="text-sm text-gray-600">
-                      Includes guided campus tours, mock lectures, career talks, and student networking sessions with local undergraduates.
-                    </p>
-                  </div>
-                </div>
-              </div>
-                    <!-- Card 3 -->
-      <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-tour>
-        <img src="https://source.unsplash.com/featured/?school,students" alt="Local Tour 3" class="w-full h-48 object-cover">
-        <div class="p-5">
-          <h3 class="text-xl font-semibold text-gray-800 mb-2">University Campus Tour</h3>
-          <p class="text-gray-600 text-sm mb-3 line-clamp-3">
-            Explore top universities in Phnom Penh to learn about academic life, programs, and future careers.
-          </p>
-          <button class="text-sm text-blue-600 font-medium hover:underline" onclick="toggleDetail(this)">Read More</button>
-          <div class="mt-4 hidden">
-            <p class="text-sm text-gray-600">
-              Includes guided campus tours, mock lectures, career talks, and student networking sessions with local undergraduates.
-            </p>
-          </div>
-        </div>
-      </div>
-            <!-- Card 3 -->
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-tour>
-                <img src="https://source.unsplash.com/featured/?school,students" alt="Local Tour 3" class="w-full h-48 object-cover">
-                <div class="p-5">
-                  <h3 class="text-xl font-semibold text-gray-800 mb-2">University Campus Tour</h3>
-                  <p class="text-gray-600 text-sm mb-3 line-clamp-3">
-                    Explore top universities in Phnom Penh to learn about academic life, programs, and future careers.
-                  </p>
-                  <button class="text-sm text-blue-600 font-medium hover:underline" onclick="toggleDetail(this)">Read More</button>
-                  <div class="mt-4 hidden">
-                    <p class="text-sm text-gray-600">
-                      Includes guided campus tours, mock lectures, career talks, and student networking sessions with local undergraduates.
-                    </p>
-                  </div>
-                </div>
-              </div>
-                    <!-- Card 3 -->
-      <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-tour>
-        <img src="https://source.unsplash.com/featured/?school,students" alt="Local Tour 3" class="w-full h-48 object-cover">
-        <div class="p-5">
-          <h3 class="text-xl font-semibold text-gray-800 mb-2">University Campus Tour</h3>
-          <p class="text-gray-600 text-sm mb-3 line-clamp-3">
-            Explore top universities in Phnom Penh to learn about academic life, programs, and future careers.
-          </p>
-          <button class="text-sm text-blue-600 font-medium hover:underline" onclick="toggleDetail(this)">Read More</button>
-          <div class="mt-4 hidden">
-            <p class="text-sm text-gray-600">
-              Includes guided campus tours, mock lectures, career talks, and student networking sessions with local undergraduates.
-            </p>
-          </div>
-        </div>
-      </div>
-            <!-- Card 3 -->
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-tour>
-                <img src="https://source.unsplash.com/featured/?school,students" alt="Local Tour 3" class="w-full h-48 object-cover">
-                <div class="p-5">
-                  <h3 class="text-xl font-semibold text-gray-800 mb-2">University Campus Tour</h3>
-                  <p class="text-gray-600 text-sm mb-3 line-clamp-3">
-                    Explore top universities in Phnom Penh to learn about academic life, programs, and future careers.
-                  </p>
-                  <button class="text-sm text-blue-600 font-medium hover:underline" onclick="toggleDetail(this)">Read More</button>
-                  <div class="mt-4 hidden">
-                    <p class="text-sm text-gray-600">
-                      Includes guided campus tours, mock lectures, career talks, and student networking sessions with local undergraduates.
-                    </p>
-                  </div>
-                </div>
-              </div>
-                    <!-- Card 3 -->
-      <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-tour>
-        <img src="https://source.unsplash.com/featured/?school,students" alt="Local Tour 3" class="w-full h-48 object-cover">
-        <div class="p-5">
-          <h3 class="text-xl font-semibold text-gray-800 mb-2">University Campus Tour</h3>
-          <p class="text-gray-600 text-sm mb-3 line-clamp-3">
-            Explore top universities in Phnom Penh to learn about academic life, programs, and future careers.
-          </p>
-          <button class="text-sm text-blue-600 font-medium hover:underline" onclick="toggleDetail(this)">Read More</button>
-          <div class="mt-4 hidden">
-            <p class="text-sm text-gray-600">
-              Includes guided campus tours, mock lectures, career talks, and student networking sessions with local undergraduates.
-            </p>
-          </div>
-        </div>
-      </div>
-            <!-- Card 3 -->
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-tour>
-                <img src="https://source.unsplash.com/featured/?school,students" alt="Local Tour 3" class="w-full h-48 object-cover">
-                <div class="p-5">
-                  <h3 class="text-xl font-semibold text-gray-800 mb-2">University Campus Tour</h3>
-                  <p class="text-gray-600 text-sm mb-3 line-clamp-3">
-                    Explore top universities in Phnom Penh to learn about academic life, programs, and future careers.
-                  </p>
-                  <button class="text-sm text-blue-600 font-medium hover:underline" onclick="toggleDetail(this)">Read More</button>
-                  <div class="mt-4 hidden">
-                    <p class="text-sm text-gray-600">
-                      Includes guided campus tours, mock lectures, career talks, and student networking sessions with local undergraduates.
-                    </p>
-                  </div>
-                </div>
-              </div>
-  
-    </div>
-  </div>
-  
-  <!-- JavaScript to toggle detail section -->
-  <script>
-    function toggleDetail(button) {
-      const detailBox = button.nextElementSibling;
-      const isHidden = detailBox.classList.contains('hidden');
-      detailBox.classList.toggle('hidden');
-      button.textContent = isHidden ? 'Show Less' : 'Read More';
-    }
-  </script>
-  
-  
-  
+      <script type="module" src="/js/s_materials.js"></script>
+
   
   
   
@@ -616,3 +472,4 @@
 <script src="/js/process.js"></script>
 <script src="/js/partners.js"></script>
 <script src="/js/exchange.js"></script>
+<script src="/js/classroom.js"></script>

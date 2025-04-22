@@ -327,186 +327,131 @@
       </div>
   </nav>
   
+
   <div class="max-w-6xl mx-auto px-4 py-12">
-    <h2 class="text-3xl font-bold text-center text-gray-800 mb-10">Study Tour in the Country</h2>
+    <!-- Tabs -->
+    <div class="mb-8 flex flex-wrap border-b border-gray-300 space-x-4 space-y-2">
+      <button class="tab-btn active py-2 px-4 bg-orange-400 text-white rounded-lg hover:bg-orange-500 focus:outline-none transition-all duration-300" onclick="showTab('tab1', event)">នាយកដ្ឋានសិក្សា</button>
+      <button class="tab-btn py-2 px-4 text-gray-700 bg-transparent border border-gray-300 rounded-lg hover:bg-orange-50 focus:outline-none transition-all duration-300" onclick="showTab('tab2', event)">បញ្ជូល-ចេញនិស្សិត</button>
+      <button class="tab-btn py-2 px-4 text-gray-700 bg-transparent border border-gray-300 rounded-lg hover:bg-orange-50 focus:outline-none transition-all duration-300" onclick="showTab('tab3', event)">គណនេយ្យ-ហិរញ្ញវត្ថុ</button>
+      <button class="tab-btn py-2 px-4 text-gray-700 bg-transparent border border-gray-300 rounded-lg hover:bg-orange-50 focus:outline-none transition-all duration-300" onclick="showTab('tab4', event)">ការិយាល័យប្រតិបត្ដិ</button>
+      <button class="tab-btn py-2 px-4 text-gray-700 bg-transparent border border-gray-300 rounded-lg hover:bg-orange-50 focus:outline-none transition-all duration-300" onclick="showTab('tab5', event)">ការិយាល័យសិក្សា</button>
+      <button class="tab-btn py-2 px-4 text-gray-700 bg-transparent border border-gray-300 rounded-lg hover:bg-orange-50 focus:outline-none transition-all duration-300" onclick="showTab('tab6', event)">វិទ្យាសាស្ត្រ</button>
+      <button class="tab-btn py-2 px-4 text-gray-700 bg-transparent border border-gray-300 rounded-lg hover:bg-orange-50 focus:outline-none transition-all duration-300" onclick="showTab('tab7', event)">គ្រប់គ្រង</button>
+      <button class="tab-btn py-2 px-4 text-gray-700 bg-transparent border border-gray-300 rounded-lg hover:bg-orange-50 focus:outline-none transition-all duration-300" onclick="showTab('tab8', event)">សេដ្ឋកិច្ច</button>
+      <button class="tab-btn py-2 px-4 text-gray-700 bg-transparent border border-gray-300 rounded-lg hover:bg-orange-50 focus:outline-none transition-all duration-300" onclick="showTab('tab9', event)">នីតិសាស្ត្រ</button>
+    </div>
   
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      
-      <!-- Card 1 -->
-      <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-tour>
-        <img src="https://source.unsplash.com/featured/?university,temple" alt="Local Tour 1" class="w-full h-48 object-cover">
-        <div class="p-5">
-          <h3 class="text-xl font-semibold text-gray-800 mb-2">Historical Sites Tour</h3>
-          <p class="text-gray-600 text-sm mb-3 line-clamp-3">
-            Discover Cambodia’s rich cultural heritage through guided visits to temples and museums.
-          </p>
-          <button class="text-sm text-blue-600 font-medium hover:underline" onclick="toggleDetail(this)">Read More</button>
-          <div class="mt-4 hidden">
-            <p class="text-sm text-gray-600">
-              This tour includes educational trips to Angkor Wat, National Museum, and local cultural workshops. Learn about ancient civilizations and architecture.
-            </p>
-          </div>
-        </div>
+    <div class="md:flex gap-6">
+      <!-- Contact Info -->
+      <div id="contact-info" class="md:w-1/2 space-y-3 border rounded-lg p-6 shadow bg-white">
+        <!-- This content will be updated dynamically -->
       </div>
   
-      <!-- Card 2 -->
-      <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-tour>
-        <img src="https://source.unsplash.com/featured/?farm,students" alt="Local Tour 2" class="w-full h-48 object-cover">
-        <div class="p-5">
-          <h3 class="text-xl font-semibold text-gray-800 mb-2">Agriculture Field Trip</h3>
-          <p class="text-gray-600 text-sm mb-3 line-clamp-3">
-            Learn about local farming techniques, sustainability, and agro-business through real field experience.
-          </p>
-          <button class="text-sm text-blue-600 font-medium hover:underline" onclick="toggleDetail(this)">Read More</button>
-          <div class="mt-4 hidden">
-            <p class="text-sm text-gray-600">
-              Visit rice fields, meet local farmers, and understand agricultural innovation in Cambodia. Ideal for environmental science and economics students.
-            </p>
-          </div>
-        </div>
-      </div>
-  
-      <!-- Card 3 -->
-      <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-tour>
-        <img src="https://source.unsplash.com/featured/?school,students" alt="Local Tour 3" class="w-full h-48 object-cover">
-        <div class="p-5">
-          <h3 class="text-xl font-semibold text-gray-800 mb-2">University Campus Tour</h3>
-          <p class="text-gray-600 text-sm mb-3 line-clamp-3">
-            Explore top universities in Phnom Penh to learn about academic life, programs, and future careers.
-          </p>
-          <button class="text-sm text-blue-600 font-medium hover:underline" onclick="toggleDetail(this)">Read More</button>
-          <div class="mt-4 hidden">
-            <p class="text-sm text-gray-600">
-              Includes guided campus tours, mock lectures, career talks, and student networking sessions with local undergraduates.
-            </p>
-          </div>
-        </div>
-      </div>
-            <!-- Card 3 -->
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-tour>
-                <img src="https://source.unsplash.com/featured/?school,students" alt="Local Tour 3" class="w-full h-48 object-cover">
-                <div class="p-5">
-                  <h3 class="text-xl font-semibold text-gray-800 mb-2">University Campus Tour</h3>
-                  <p class="text-gray-600 text-sm mb-3 line-clamp-3">
-                    Explore top universities in Phnom Penh to learn about academic life, programs, and future careers.
-                  </p>
-                  <button class="text-sm text-blue-600 font-medium hover:underline" onclick="toggleDetail(this)">Read More</button>
-                  <div class="mt-4 hidden">
-                    <p class="text-sm text-gray-600">
-                      Includes guided campus tours, mock lectures, career talks, and student networking sessions with local undergraduates.
-                    </p>
-                  </div>
-                </div>
-              </div>
-                    <!-- Card 3 -->
-      <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-tour>
-        <img src="https://source.unsplash.com/featured/?school,students" alt="Local Tour 3" class="w-full h-48 object-cover">
-        <div class="p-5">
-          <h3 class="text-xl font-semibold text-gray-800 mb-2">University Campus Tour</h3>
-          <p class="text-gray-600 text-sm mb-3 line-clamp-3">
-            Explore top universities in Phnom Penh to learn about academic life, programs, and future careers.
-          </p>
-          <button class="text-sm text-blue-600 font-medium hover:underline" onclick="toggleDetail(this)">Read More</button>
-          <div class="mt-4 hidden">
-            <p class="text-sm text-gray-600">
-              Includes guided campus tours, mock lectures, career talks, and student networking sessions with local undergraduates.
-            </p>
-          </div>
-        </div>
-      </div>
-            <!-- Card 3 -->
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-tour>
-                <img src="https://source.unsplash.com/featured/?school,students" alt="Local Tour 3" class="w-full h-48 object-cover">
-                <div class="p-5">
-                  <h3 class="text-xl font-semibold text-gray-800 mb-2">University Campus Tour</h3>
-                  <p class="text-gray-600 text-sm mb-3 line-clamp-3">
-                    Explore top universities in Phnom Penh to learn about academic life, programs, and future careers.
-                  </p>
-                  <button class="text-sm text-blue-600 font-medium hover:underline" onclick="toggleDetail(this)">Read More</button>
-                  <div class="mt-4 hidden">
-                    <p class="text-sm text-gray-600">
-                      Includes guided campus tours, mock lectures, career talks, and student networking sessions with local undergraduates.
-                    </p>
-                  </div>
-                </div>
-              </div>
-                    <!-- Card 3 -->
-      <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-tour>
-        <img src="https://source.unsplash.com/featured/?school,students" alt="Local Tour 3" class="w-full h-48 object-cover">
-        <div class="p-5">
-          <h3 class="text-xl font-semibold text-gray-800 mb-2">University Campus Tour</h3>
-          <p class="text-gray-600 text-sm mb-3 line-clamp-3">
-            Explore top universities in Phnom Penh to learn about academic life, programs, and future careers.
-          </p>
-          <button class="text-sm text-blue-600 font-medium hover:underline" onclick="toggleDetail(this)">Read More</button>
-          <div class="mt-4 hidden">
-            <p class="text-sm text-gray-600">
-              Includes guided campus tours, mock lectures, career talks, and student networking sessions with local undergraduates.
-            </p>
-          </div>
-        </div>
-      </div>
-            <!-- Card 3 -->
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-tour>
-                <img src="https://source.unsplash.com/featured/?school,students" alt="Local Tour 3" class="w-full h-48 object-cover">
-                <div class="p-5">
-                  <h3 class="text-xl font-semibold text-gray-800 mb-2">University Campus Tour</h3>
-                  <p class="text-gray-600 text-sm mb-3 line-clamp-3">
-                    Explore top universities in Phnom Penh to learn about academic life, programs, and future careers.
-                  </p>
-                  <button class="text-sm text-blue-600 font-medium hover:underline" onclick="toggleDetail(this)">Read More</button>
-                  <div class="mt-4 hidden">
-                    <p class="text-sm text-gray-600">
-                      Includes guided campus tours, mock lectures, career talks, and student networking sessions with local undergraduates.
-                    </p>
-                  </div>
-                </div>
-              </div>
-                    <!-- Card 3 -->
-      <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-tour>
-        <img src="https://source.unsplash.com/featured/?school,students" alt="Local Tour 3" class="w-full h-48 object-cover">
-        <div class="p-5">
-          <h3 class="text-xl font-semibold text-gray-800 mb-2">University Campus Tour</h3>
-          <p class="text-gray-600 text-sm mb-3 line-clamp-3">
-            Explore top universities in Phnom Penh to learn about academic life, programs, and future careers.
-          </p>
-          <button class="text-sm text-blue-600 font-medium hover:underline" onclick="toggleDetail(this)">Read More</button>
-          <div class="mt-4 hidden">
-            <p class="text-sm text-gray-600">
-              Includes guided campus tours, mock lectures, career talks, and student networking sessions with local undergraduates.
-            </p>
-          </div>
-        </div>
-      </div>
-            <!-- Card 3 -->
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-tour>
-                <img src="https://source.unsplash.com/featured/?school,students" alt="Local Tour 3" class="w-full h-48 object-cover">
-                <div class="p-5">
-                  <h3 class="text-xl font-semibold text-gray-800 mb-2">University Campus Tour</h3>
-                  <p class="text-gray-600 text-sm mb-3 line-clamp-3">
-                    Explore top universities in Phnom Penh to learn about academic life, programs, and future careers.
-                  </p>
-                  <button class="text-sm text-blue-600 font-medium hover:underline" onclick="toggleDetail(this)">Read More</button>
-                  <div class="mt-4 hidden">
-                    <p class="text-sm text-gray-600">
-                      Includes guided campus tours, mock lectures, career talks, and student networking sessions with local undergraduates.
-                    </p>
-                  </div>
-                </div>
-              </div>
-  
+      <!-- Contact Form -->
+      <form class="md:w-1/2 space-y-4 border rounded-lg p-6 shadow bg-white">
+        <input type="email" placeholder="Email" class="w-full border px-4 py-2 rounded outline-blue-500" required />
+        <input type="text" placeholder="Subject" class="w-full border px-4 py-2 rounded outline-blue-500" required />
+        <textarea rows="5" placeholder="Message..." class="w-full border px-4 py-2 rounded outline-blue-500" required></textarea>
+        <button type="submit" class="bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700">SEND</button>
+      </form>
     </div>
   </div>
   
-  <!-- JavaScript to toggle detail section -->
-  <script>
-    function toggleDetail(button) {
-      const detailBox = button.nextElementSibling;
-      const isHidden = detailBox.classList.contains('hidden');
-      detailBox.classList.toggle('hidden');
-      button.textContent = isHidden ? 'Show Less' : 'Read More';
+  <style>
+    .tab-btn {
+      @apply px-6 py-3 text-lg font-medium border rounded-lg transition-all ease-in-out duration-300;
     }
+    .tab-btn.active {
+      @apply bg-orange-400 text-white border-orange-400 shadow-lg;
+    }
+    .tab-btn:hover {
+      @apply bg-orange-50 text-orange-600;
+    }
+  </style>
+  
+  <script>
+    const contacts = {
+      tab1: {
+        title: 'ទំនាក់ទំនងនាយកដ្ឋានសិក្សា',
+        phone: ['(855) 78 985 163', '(855) 93 506 114', '(855) 71 260 6399'],
+        email: 'info@ppiu.edu.kh',
+        website: 'http://www.ppiu.edu.kh'
+      },
+      tab2: {
+        title: 'ការិយាល័យបញ្ជូល-ចេញនិស្សិត',
+        phone: ['(855) 78 123 456'],
+        email: 'admission@ppiu.edu.kh',
+        website: 'http://www.ppiu.edu.kh'
+      },
+      tab3: {
+        title: 'គណនេយ្យ-ហិរញ្ញវត្ថុ',
+        phone: ['(855) 93 987 654'],
+        email: 'finance@ppiu.edu.kh',
+        website: 'http://www.ppiu.edu.kh'
+      },
+      tab4: {
+        title: 'ការិយាល័យប្រតិបត្តិ',
+        phone: ['(855) 88 456 789'],
+        email: 'office@ppiu.edu.kh',
+        website: 'http://www.ppiu.edu.kh'
+      },
+      tab5: {
+        title: 'ការិយាល័យសិក្សា',
+        phone: ['(855) 11 222 333'],
+        email: 'study@ppiu.edu.kh',
+        website: 'http://www.ppiu.edu.kh'
+      },
+      tab6: {
+        title: 'មហាវិទ្យាល័យវិទ្យាសាស្ត្រ',
+        phone: ['(855) 96 654 321'],
+        email: 'science@ppiu.edu.kh',
+        website: 'http://www.ppiu.edu.kh'
+      },
+      tab7: {
+        title: 'មហាវិទ្យាល័យគ្រប់គ្រង',
+        phone: ['(855) 85 234 567'],
+        email: 'management@ppiu.edu.kh',
+        website: 'http://www.ppiu.edu.kh'
+      },
+      tab8: {
+        title: 'មហាវិទ្យាល័យសេដ្ឋកិច្ច',
+        phone: ['(855) 99 888 777'],
+        email: 'economics@ppiu.edu.kh',
+        website: 'http://www.ppiu.edu.kh'
+      },
+      tab9: {
+        title: 'មហាវិទ្យាល័យនីតិសាស្ត្រ',
+        phone: ['(855) 88 777 666'],
+        email: 'law@ppiu.edu.kh',
+        website: 'http://www.ppiu.edu.kh'
+      },
+    };
+  
+    function showTab(tabId, e) {
+      const contact = contacts[tabId];
+      const infoDiv = document.getElementById('contact-info');
+  
+      infoDiv.innerHTML = `
+        <h3 class="font-semibold text-lg mb-2">${contact.title}</h3>
+        ${contact.phone.map(num => `<p>📞 ${num}</p>`).join('')}
+        <p>📧 ${contact.email}</p>
+        <p>🌐 <a href="${contact.website}" class="text-blue-600 hover:underline">${contact.website}</a></p>
+      `;
+  
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+      e.target.classList.add('active');
+    }
+  
+    // Load default tab content
+    window.onload = () => {
+      showTab('tab1', { target: document.querySelector('.tab-btn') });
+    };
   </script>
+  
+
+
+
   
   
   
