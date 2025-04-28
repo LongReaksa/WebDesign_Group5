@@ -22,31 +22,31 @@
 // Testimonial data - all content moved to JavaScript
 const testimonials = [
     {
-        image: "/images/luffy.jpg",
+        image: "/images/banner_4.JPG",
         text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo est nobis molestias non magnam optio eaque, rem veniam dolor maxime?",
         name: "Van Devit",
         role: "Web Developer"
     },
     {
-        image: "/images/luffy.jpg",
+        image: "/images/banner.JPG",
         text: "This should be used to tell a story and include any testimonials you might have about your product or service for your clients!",
         name: "Reksa",
         role: "Backend Developer"
     },
     {
-        image: "/images/luffy.jpg",
+        image: "/images/admission_1.JPG",
         text: "This should be used to tell a story and include any testimonials you might have about your product or service for your clients!",
         name: "Thean Fong",
         role: "Design UX & UI"
     },
     {
-        image: "/images/luffy.jpg",
+        image: "/images/banner_4.JPG",
         text: "This should be used to tell a story and include any testimonials you might have about your product or service for your clients!",
         name: "LiYuu",
         role: "Project Manager"
     },
     {
-        image: "/images/luffy.jpg",
+        image: "/images/admission_1.JPG",
         text: "This should be used to tell a story and include any testimonials you might have about your product or service for your clients!",
         name: "Reaksmey",
         role: "Design UX & UI"
